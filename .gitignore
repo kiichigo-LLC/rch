@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs / env
+*.log
+.env
+.env.*
+
+# Sass / build artifacts
+*.css.map
+*.sass.map
+
+# Node (使う場合)
+node_modules/
+npm-debug.log*
