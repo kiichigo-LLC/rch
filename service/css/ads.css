@@ -1,0 +1,799 @@
+body {
+  background-color: var(--backgroundColor);
+  color: var(--gray1000);
+}
+body ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+body ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+body ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.dispPC {
+  display: none;
+}
+
+.dispSP {
+  display: block;
+}
+
+.fontWeightNormal {
+  font-weight: 400;
+}
+
+.txtUnderline {
+  text-decoration: underline;
+}
+
+.textSmall {
+  font-size: 0.9rem;
+}
+
+.ib {
+  display: inline-block;
+}
+
+body {
+  font-family: Noto Sans JP, Noto Sans, sans-serif;
+  font-smooth: always;
+  color: #2d3539;
+}
+
+header {
+  border-top: #bf0000 2px solid;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  z-index: 10;
+}
+header .headerInner {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+header.fixed {
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
+  border-bottom: 1px solid #dadce1;
+  width: 100%;
+  background: #fff;
+}
+
+.RchLogo {
+  width: 135px;
+  height: 28px;
+  padding: 16px;
+  box-sizing: content-box;
+}
+.RchLogo a {
+  display: block;
+}
+.RchLogo img {
+  width: 100%;
+  height: auto;
+}
+
+.globalNavigation {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background: #F9F6F0;
+  border-top: 1px solid #dadce1;
+  position: relative;
+  flex-wrap: wrap;
+}
+.globalNavigation:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+.globalNavigation li {
+  list-style: none;
+  position: relative;
+  border-bottom: #F9F6F0 2px solid;
+}
+.fixed .globalNavigation li:not(.contact) a {
+  padding: 4px 16px;
+}
+.globalNavigation li a {
+  text-decoration: none;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #442C09;
+  display: block;
+}
+.globalNavigation li.active {
+  border-bottom: #bf0000 2px solid;
+}
+.globalNavigation li.active a {
+  color: #bf0000;
+}
+.globalNavigation li.contact {
+  position: absolute;
+  right: 16px;
+  top: -54px;
+}
+.globalNavigation li.contact a {
+  color: #fff;
+  background: #bf0000;
+}
+.fixed .globalNavigation li.contact {
+  top: calc(-100% - 22px);
+}
+
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 14px 16px;
+  padding-left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.breadcrumb li {
+  font-size: 12px;
+  line-height: 20px;
+}
+.breadcrumb li a {
+  font-size: 12px;
+  line-height: 20px;
+  display: block;
+  color: #bf0000;
+  padding-right: 22px;
+  position: relative;
+}
+.breadcrumb li a:after {
+  content: "";
+  width: 6px;
+  height: 220px;
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 0;
+  background: url(../img/ads/divider.svg) no-repeat left top;
+  background-size: 6px 20px;
+}
+.breadcrumb li:last-of-type a {
+  color: #41474c;
+  text-decoration: none;
+  pointer-events: none;
+  padding-right: 0;
+}
+.breadcrumb li:last-of-type a:after {
+  content: none;
+}
+
+.pageHead {
+  padding: 32px 16px 0;
+  display: flex;
+  flex-flow: column;
+  color: #2d3539;
+}
+.pageHead h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.pageHead p {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 16px;
+  margin: 0;
+}
+.pageHeadContact {
+  color: #fff;
+  display: block;
+  text-align: center;
+  background: #bf0000 url(../../img/ads/arrow-right.svg) no-repeat;
+  background-position: right 8px center;
+  text-decoration: none;
+  padding: 9px 36px;
+  margin: 0 50px;
+  font-weight: bold;
+}
+.pageHead.subPageHead {
+  position: relative;
+  z-index: 0;
+  padding: 48px 16px 24px;
+}
+.pageHead.subPageHead h1 {
+  margin-top: 0;
+  font-size: 40px;
+}
+.pageHead.subPageHead h1 span {
+  font-size: 16px;
+  display: block;
+}
+
+.RchAdLogo {
+  width: 258px;
+  height: auto;
+}
+
+.RchAdMV {
+  margin-top: 32px;
+  width: 100%;
+  height: auto;
+}
+
+.sectionHead {
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+.sectionBrown {
+  background: #F2EBE1;
+}
+
+.aboutSectionHead {
+  margin: 0;
+}
+
+.prSectionImage,
+.stepSectionImage {
+  width: 100%;
+  margin: 0;
+}
+
+.stepSection {
+  padding: 24px 16px;
+}
+.stepSection .sectionHead, .stepSectionText {
+  margin-bottom: 32px;
+}
+.stepSectionImage {
+  margin-bottom: 16px;
+}
+
+.sectionHead {
+  text-align: center;
+}
+.sectionHead h2 {
+  margin: 0;
+  color: #442C09;
+  font-size: 22px;
+}
+.sectionHead img {
+  width: auto;
+  height: 70.5px;
+  max-width: 100%;
+}
+
+.aboutSection {
+  padding: 24px 16px;
+}
+.aboutSectionItem {
+  margin: 16px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
+}
+.aboutSectionItemImg {
+  text-align: center;
+  margin-bottom: 4px;
+}
+.aboutSectionItemText {
+  color: #442C09;
+  text-align: center;
+  font-weight: bold;
+}
+.aboutSectionItemTextDesc {
+  font-size: 10px;
+  font-weight: normal;
+  display: block;
+}
+.aboutSectionBtn {
+  margin-top: 32px;
+}
+.aboutSectionBtn a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: #bf0000 url(../../img/ads/arrow-right.svg) no-repeat;
+  background-size: 30px auto;
+  background-position: right 8px center;
+  text-decoration: none;
+  padding: 16px 54px;
+  margin: 16px 0;
+}
+
+.prSection {
+  padding: 24px 16px 40px;
+}
+.prSectionText {
+  color: #2d3539;
+  margin: 32px 0;
+}
+.prSectionText span {
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.advantageSection {
+  padding: 24px 16px 40px;
+}
+.advantageSectionHead {
+  color: #442C09;
+}
+.advantageSectionItem {
+  text-align: center;
+  max-width: 240px;
+  margin: 0 auto 24px;
+}
+.advantageSectionItemImg {
+  margin-bottom: 16px;
+}
+.advantageSectionItemText {
+  font-size: 16px;
+  text-align: left;
+}
+
+.contactSection {
+  padding: 24px 16px;
+}
+
+.contactHead {
+  font-size: 16px;
+  text-align: center;
+}
+
+.contactText p.contactText-info {
+  font-size: 16px;
+  font-weight: bold;
+}
+.contactText a {
+  color: #bf0000;
+  font-weight: bold;
+}
+
+.contactBtn a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: #bf0000 url(../../img/ads/arrow-right.svg) no-repeat;
+  background-size: 30px auto;
+  background-position: right 8px center;
+  text-decoration: none;
+  padding: 16px 54px;
+  margin: 16px 0;
+}
+
+footer {
+  padding: 40px 0;
+}
+footer .boxItems ul:not(.dispPC) {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  justify-content: center;
+}
+footer .boxItems ul:not(.dispPC) li {
+  padding-right: 16px;
+  position: relative;
+}
+footer .boxItems ul:not(.dispPC) li > a {
+  font-size: 14px;
+  color: #2d3539;
+}
+footer .boxItems ul:not(.dispPC) li:after {
+  content: "";
+  height: 16px;
+  width: 1px;
+  background: #c5c8ce;
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 5px;
+}
+footer .boxItems ul:not(.dispPC) li:last-child {
+  padding-right: 0;
+}
+footer .boxItems ul:not(.dispPC) li:last-child:after {
+  content: none;
+}
+footer .boxItems .copyright {
+  text-align: center;
+  display: block;
+  font-size: 14px;
+}
+
+.termsSection h2 {
+  font-size: 16px;
+  margin: 0 16px 16px;
+}
+.termsSection .sectionInner div {
+  font-size: 14px;
+  margin: 16px;
+}
+.termsSection .textSmall {
+  font-size: 12px;
+}
+.termsSection .alignRight {
+  text-align: right;
+}
+
+.guidelinesSection .sectionInner {
+  padding: 24px 16px;
+}
+.guidelinesSection table tr th, .guidelinesSection table tr td {
+  border: 1px solid #41474c;
+  padding: 4px;
+  width: 50%;
+}
+.guidelinesSection table tr th {
+  text-align: left;
+}
+.guidelinesSection table tr:nth-child(odd) {
+  background: #F2EBE1;
+}
+.guidelinesSection table tr:first-child {
+  background: #442C09;
+  color: #fff;
+}
+.guidelinesSection h2 {
+  margin: 32px 0 8px;
+}
+.guidelinesSection h2 span {
+  font-weight: normal;
+  font-size: 0.9rem;
+  display: block;
+}
+.guidelinesSection ul {
+  padding: 0;
+}
+.guidelinesSection ul li {
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .dispPC {
+    display: block;
+  }
+  .dispSP {
+    display: none;
+  }
+  header {
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px;
+    border-bottom: 1px solid #dadce1;
+  }
+  header .headerInner {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .RchLogo {
+    width: 156px;
+    height: 36px;
+    padding: 20px 16px 14px;
+    box-sizing: content-box;
+  }
+  .RchLogo a {
+    display: block;
+  }
+  .RchLogo img {
+    width: 100%;
+    height: auto;
+  }
+  .globalNavigation {
+    background: inherit;
+    border-top: none;
+    position: relative;
+    padding-right: 132px;
+  }
+  .globalNavigation:before {
+    content: none;
+  }
+  .globalNavigation li {
+    padding: 0 8px;
+  }
+  .globalNavigation li a {
+    padding: 24px 16px;
+  }
+  .globalNavigation li a:hover {
+    color: #fff;
+    background: #bf0000;
+  }
+  .globalNavigation li.active {
+    border-bottom: #bf0000 2px solid;
+  }
+  .globalNavigation li.active a {
+    color: #bf0000;
+  }
+  .globalNavigation li.active a:hover {
+    background: #fff;
+  }
+  .globalNavigation li:last-of-type {
+    top: 16px;
+    height: 37px;
+    width: 116px;
+    padding: 0;
+  }
+  .globalNavigation li:last-of-type a {
+    padding: 8px 16px;
+  }
+  .pageHead {
+    padding: 0 16px 16px;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1040px;
+    margin: 16px auto 0;
+  }
+  .pageHead h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .pageHead p {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 16px;
+    margin: 0;
+  }
+  .pageHeadContact {
+    color: #fff;
+    display: block;
+    text-align: center;
+    background: #bf0000 url(../../img/ads/arrow-right.svg) no-repeat;
+    background-position: right 8px center;
+    text-decoration: none;
+    padding: 9px 36px;
+    margin: 0;
+    font-weight: bold;
+    width: 260px;
+  }
+  .pageHeadContact:hover {
+    opacity: 0.8;
+  }
+  .pageHeadText {
+    flex-shrink: 1;
+    padding-right: 32px;
+  }
+  .RchAdLogo {
+    width: 347px;
+    height: auto;
+  }
+  .RchAdMV {
+    margin-top: 0;
+  }
+  .sectionHead {
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+  .sectionBrown {
+    background: #F2EBE1;
+  }
+  .aboutSectionHead {
+    margin: 0;
+  }
+  .prSectionImage,
+  .stepSectionImage {
+    width: 100%;
+    margin: 0;
+  }
+  .stepSection {
+    padding: 24px 16px;
+    text-align: center;
+  }
+  .stepSectionText {
+    display: inline-block;
+    text-align: left;
+    max-width: 1040px;
+  }
+  .stepSectionImage {
+    max-width: 695px;
+    margin: 0 auto 16px;
+    margin-bottom: 16px;
+  }
+  .sectionHead h2 {
+    font-size: 28px;
+  }
+  .sectionHead img {
+    height: 94px;
+  }
+  .aboutSection {
+    padding: 24px 16px;
+  }
+  .aboutSectionBox {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .aboutSectionItem {
+    width: 320px;
+    height: 200px;
+    margin: 16px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
+  }
+  .aboutSectionItemImg {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .aboutSectionItemText {
+    color: #442C09;
+    text-align: center;
+    font-weight: bold;
+    line-height: 110%;
+  }
+  .aboutSectionItemTextDesc {
+    font-size: 10px;
+    font-weight: normal;
+    display: block;
+    text-align: right;
+    margin-top: 8px;
+  }
+  .aboutSectionBtn {
+    margin-top: 16px;
+  }
+  .aboutSectionBtn a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    background: #bf0000 url(../../img/ads/arrow-right.svg) no-repeat;
+    background-size: 20px auto;
+    background-position: right 8px center;
+    text-decoration: none;
+    padding: 9px 36px;
+    margin: 16px auto;
+    max-width: 344px;
+  }
+  .aboutSectionBtn a:hover {
+    opacity: 0.8;
+  }
+  .prSection {
+    padding: 24px 16px 40px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .prSectionText {
+    color: #2d3539;
+    margin: 32px 0;
+  }
+  .prSectionText span {
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .advantageSection {
+    padding: 24px 16px 40px;
+  }
+  .advantageSectionBox {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .advantageSectionHead {
+    color: #442C09;
+  }
+  .advantageSectionItem {
+    max-width: 242px;
+    width: calc(25% - 10px);
+    margin: 0;
+  }
+  .advantageSectionItem h3 {
+    line-height: 3;
+  }
+  .advantageSectionItem:nth-child(3) h3 {
+    line-height: 1.5;
+  }
+  .advantageSectionItemImg {
+    margin-bottom: 16px;
+  }
+  .advantageSectionItemImg img {
+    width: 100%;
+    height: auto;
+  }
+  .advantageSectionItemText {
+    font-size: 16px;
+    text-align: left;
+  }
+  .contactSection {
+    padding: 24px 16px;
+  }
+  .contactHead {
+    font-size: 20px;
+    text-align: center;
+  }
+  .contactBtn a {
+    color: #fff;
+    width: 392px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+  }
+  .contactBtn a:hover {
+    opacity: 0.8;
+  }
+  .sectionInner {
+    max-width: 1040px;
+    margin: 16px auto 0;
+  }
+  footer {
+    padding: 80px 0;
+  }
+  footer .boxItems ul:not(.dispPC) {
+    display: none;
+  }
+  footer .boxItems ul:not(.dispSP) {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    justify-content: center;
+  }
+  footer .boxItems ul:not(.dispSP) li {
+    padding-right: 16px;
+    position: relative;
+  }
+  footer .boxItems ul:not(.dispSP) li > a {
+    font-size: 14px;
+    color: #2d3539;
+  }
+  footer .boxItems ul:not(.dispSP) li > a:hover {
+    opacity: 0.8;
+  }
+  footer .boxItems ul:not(.dispSP) li:after {
+    content: "";
+    height: 16px;
+    width: 1px;
+    background: #c5c8ce;
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 5px;
+  }
+  footer .boxItems ul:not(.dispSP) li:last-child {
+    padding-right: 0;
+  }
+  footer .boxItems ul:not(.dispSP) li:last-child:after {
+    content: none;
+  }
+  footer .boxItems .copyright {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+  }
+  .guidelinesSection table {
+    width: 100%;
+  }
+  .guidelinesSection table tr th, .guidelinesSection table tr td {
+    width: inherit;
+  }
+  .guidelinesSection h2 span {
+    float: right;
+    line-height: 2.4;
+  }
+}/*# sourceMappingURL=ads.css.map */

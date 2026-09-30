@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "build:css": "sass scss/style.scss css/style.css --style=compressed --no-source-map",
+    "build:js": "esbuild js/main.js --bundle --minify --outfile=js/script.js --format=iife",
+    "build:html": "php dev.php > index.html",
+    "build": "npm run build:css && npm run build:js && npm run build:html",
+    "watch": "chokidar 'scss/**/*.scss' 'js/main.js' 'js/modules/**/*.js' 'dev.php' '_parts/**/*.php' --ignore 'js/script.js' -c 'npm run build'",
+    "serve": "php -S localhost:1024 -t ../..",
+    "b": "npm run build",
+    "w": "npm run build && concurrently -k -n watch,serve -c cyan,magenta \"npm run watch\" \"npm run serve\""
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.25.0"
+  }
+}
