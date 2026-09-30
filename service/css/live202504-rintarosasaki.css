@@ -1,0 +1,582 @@
+@charset "UTF-8";
+body {
+  background-color: var(--white);
+  color: var(--gray1000);
+}
+body ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+body ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+body ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* 基本設定 */
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#cmo_pitari_banner {
+  background: white;
+}
+
+picture {
+  display: inline-block;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.dispSP {
+  display: block !important;
+}
+
+.dispPC {
+  display: none !important;
+}
+
+img {
+  width: 100%;
+}
+
+.breadcrumb {
+  background: #fff;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.breadcrumb::-webkit-scrollbar {
+  display: none;
+}
+
+/* mainHeaderSec */
+.mainHeaderSec {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.contaner {
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.ch-info .inner {
+  padding: 4.26vw 4.26vw 9.06vw;
+}
+.ch-info .inner a {
+  margin: 0 0 9.06vw;
+  width: 100%;
+  height: 19.42vw;
+  display: block;
+}
+.ch-info .inner a .rch-link {
+  display: block;
+  width: 100%;
+  height: 19.42vw;
+  font-size: 6.4vw;
+  color: #fff;
+  background: #BF0000;
+  border-radius: 2.13vw;
+}
+.ch-info .inner a .rch-link:hover {
+  background-color: #ff1212;
+  border-color: #ff1212;
+}
+.ch-info .inner p {
+  font-size: 4.26vw;
+}
+
+.about {
+  padding: 8.53vw 0 4.26vw;
+  background-image: url(../img/live/2504/rintarosasaki/about-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about .inner {
+  max-width: 1080px;
+  margin: auto;
+}
+.about img {
+  display: block;
+  margin: auto;
+}
+.about img.rintaro {
+  width: 68.57vw;
+  margin-bottom: 4.26vw;
+}
+.about .wrap h2 {
+  text-align: center;
+  font-size: 8.53vw;
+  color: #fff;
+}
+.about .wrap p {
+  padding: 4.8vw 6.4vw 8.53vw;
+  font-size: 4.26vw;
+  color: #fff;
+  text-align: justify;
+}
+.about .wrap picture {
+  display: block;
+}
+.about .wrap picture img.stanford {
+  width: 91.46vw;
+}
+
+.schedule {
+  padding: 9.06vw 0;
+}
+.schedule h2 {
+  padding: 0 4.26vw 4.26vw;
+  text-align: center;
+  font-size: 6.4vw;
+}
+.schedule p {
+  padding: 0 4.26vw;
+  font-size: 3.2vw;
+}
+.schedule table {
+  margin-bottom: 4.26vw;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 4.26vw;
+  text-align: center;
+}
+.schedule table td {
+  width: 17.06vw;
+  padding: 2.13vw 0;
+  border-right: 1px solid #D1D1D1;
+}
+.schedule table td span.red {
+  color: #BF0000;
+}
+.schedule table td span.small {
+  font-size: 3.2vw;
+}
+.schedule table td .live_icon {
+  width: 14.93vw;
+}
+.schedule table td:first-child {
+  padding-left: 2.13vw;
+  width: 18.4vw;
+}
+.schedule table td:last-child {
+  border-right: none;
+  width: 41.6vw;
+  padding-right: 2.13vw;
+}
+.schedule table tr:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+
+.delivery {
+  padding: 0 4.26vw 9.06vw;
+}
+.delivery .inner {
+  max-width: 1080px;
+  margin: auto;
+}
+.delivery .inner .wrap .img-box {
+  margin-bottom: 6.4vw;
+}
+.delivery .inner .wrap .delivery-box h2 {
+  margin-bottom: 4.26vw;
+  font-size: 6.4vw;
+}
+.delivery .inner .wrap .delivery-box p {
+  text-align: justify;
+  margin-bottom: 6.4vw;
+  font-size: 4.26vw;
+}
+.delivery .inner .wrap .delivery-box .link-wrap {
+  margin-bottom: 0;
+}
+.delivery .inner .wrap .delivery-box .link-wrap a.link-card {
+  display: block;
+  margin: 0 3.2vw 6.4vw;
+  height: 27.73vw;
+  border: 1px solid #BF0000;
+  border-radius: 2.13vw;
+  display: flex;
+  align-items: center;
+}
+.delivery .inner .wrap .delivery-box .link-wrap a.link-card .icon {
+  width: 19.2vw;
+  margin: 0 4.8vw 0 4.26vw;
+}
+.delivery .inner .wrap .delivery-box .link-wrap a.link-card p {
+  width: 42.66vw;
+  margin-bottom: 0;
+  font-size: 4.26vw;
+  font-weight: bold;
+  color: #BF0000;
+}
+.delivery .inner .wrap .delivery-box .link-wrap a.link-card .arrow {
+  width: 4.61vw;
+  margin-left: 6.92vw;
+}
+.delivery .inner .wrap .delivery-box p.use {
+  font-size: 3.2vw;
+  margin-bottom: 0;
+}
+
+.about-rch {
+  padding: 6.4vw 0;
+  background: #F5F5F5;
+}
+.about-rch h2 {
+  margin-bottom: 4.26vw;
+  color: #BF0000;
+  text-align: center;
+  font-size: 6.4vw;
+}
+.about-rch p {
+  padding: 0 4.26vw;
+  color: #000;
+  font-size: 3.2vw;
+}
+
+@media screen and (min-width: 768px) {
+  .dispSP {
+    display: none !important;
+  }
+  .dispPC {
+    display: block !important;
+  }
+  /* mainHeaderSec */
+  .ch-info .inner {
+    padding: 2.75vw 0 4.13vw;
+  }
+  .ch-info .inner a {
+    margin: 0 auto 2.06vw;
+    width: 48.27vw;
+    height: 5.86vw;
+  }
+  .ch-info .inner a .rch-link {
+    width: 48.27vw;
+    height: 5.86vw;
+    font-size: 2.3vw;
+    border-radius: 0.69vw;
+  }
+  .ch-info .inner p {
+    font-size: 1.38vw;
+    text-align: center;
+  }
+  .about {
+    padding: 3.44vw;
+    background-image: url(../img/live/2504/rintarosasaki/about-bg-m.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about img {
+    display: block;
+    margin: auto;
+  }
+  .about img.rintaro {
+    width: 32.58vw;
+    height: 32.58vw;
+    margin: 0;
+  }
+  .about .wrap {
+    margin-left: 2.75vw;
+  }
+  .about .wrap h2 {
+    margin: 2.06vw 0 1.38vw;
+    text-align: left;
+    font-size: 2.75vw;
+  }
+  .about .wrap p {
+    margin-bottom: 2.06vw;
+    padding: 0;
+    font-size: 1.38vw;
+    text-align: justify;
+  }
+  .schedule {
+    padding: 4.74vw 0;
+  }
+  .schedule h2 {
+    padding: 0 0 2.06vw;
+    font-size: 2.06vw;
+  }
+  .schedule p {
+    margin: auto;
+    padding: 0;
+    font-size: 1.03vw;
+    width: 62.06vw;
+  }
+  .schedule table {
+    margin: 0 auto 2.06vw;
+    width: 62.06vw;
+    font-size: 1.38vw;
+  }
+  .schedule table td {
+    width: 8.96vw;
+    height: 4.13vw;
+    padding: 0.69vw 0;
+    border-right: 1px solid #D1D1D1;
+  }
+  .schedule table td span.small {
+    font-size: 1.15vw;
+  }
+  .schedule table td .live_icon {
+    width: 5.94vw;
+  }
+  .schedule table td:first-child {
+    padding-left: 1.38vw;
+    width: 10.34vw;
+  }
+  .schedule table td:last-child {
+    width: 41.6vw;
+    padding-right: 1.38vw;
+  }
+  .delivery {
+    padding: 0 3.44vw 4.74vw;
+  }
+  .delivery .inner .wrap {
+    display: flex;
+  }
+  .delivery .inner .wrap .img-box {
+    margin-right: 2.75vw;
+    margin-bottom: 0;
+  }
+  .delivery .inner .wrap .img-box img {
+    width: 32.58vw;
+  }
+  .delivery .inner .wrap .delivery-box h2 {
+    margin-bottom: 2.06vw;
+    font-size: 2.06vw;
+  }
+  .delivery .inner .wrap .delivery-box p {
+    margin-bottom: 2.06vw;
+    font-size: 1.38vw;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap {
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card {
+    margin: 0 2.06vw 2.06vw 0;
+    width: 27.58vw;
+    height: 8.96vw;
+    border-radius: 0.69vw;
+    display: flex;
+    align-items: center;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card:nth-child(2) {
+    margin-right: 0;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card .icon {
+    width: 6.2vw;
+    margin: 0 1.38vw;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card p {
+    width: 13.79vw;
+    margin-bottom: 0;
+    font-size: 1.3vw;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card .arrow {
+    width: 1.55vw;
+    margin-left: 2.75vw;
+  }
+  .delivery .inner .wrap .delivery-box p.use {
+    font-size: 1.03vw;
+    margin-bottom: 0;
+  }
+  .about-rch {
+    padding: 2.06vw 0 1.29vw;
+  }
+  .about-rch h2 {
+    margin-bottom: 1.38vw;
+    font-size: 2.06vw;
+  }
+  .about-rch p {
+    width: 41.37vw;
+    margin: auto;
+    padding: 0;
+    font-size: 1.2vw;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .ch-info .inner {
+    padding: 32px 0 56px;
+  }
+  .ch-info .inner a {
+    margin: 0 auto 24px;
+    width: 560px;
+    height: 68px;
+  }
+  .ch-info .inner a .rch-link {
+    width: 560px;
+    height: 68px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+  }
+  .ch-info .inner p {
+    font-size: 1rem;
+  }
+  .about {
+    padding: 32px;
+    background-image: url(../img/live/2504/rintarosasaki/about-bg-m.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about img {
+    display: block;
+    margin: auto;
+  }
+  .about img.rintaro {
+    width: 378px;
+    height: 378px;
+    margin: 0;
+  }
+  .about .wrap {
+    margin-left: 32px;
+  }
+  .about .wrap h2 {
+    margin: 24px 0 16px;
+    font-size: 2rem;
+  }
+  .about .wrap p {
+    width: 670px;
+    margin-bottom: 24px;
+    padding: 0;
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .about .wrap picture {
+    display: block;
+  }
+  .about .wrap picture img.stanford {
+    width: 670px;
+  }
+  .schedule {
+    padding: 56px 0;
+  }
+  .schedule h2 {
+    padding: 0 0 24px;
+    font-size: 1.5rem;
+  }
+  .schedule p {
+    font-size: 0.75rem;
+    width: 720px;
+  }
+  .schedule table {
+    margin: 0 auto 24px;
+    width: 720px;
+    font-size: 1rem;
+  }
+  .schedule table td {
+    width: 104px;
+    height: 48px;
+    padding: 8px 0;
+  }
+  .schedule table td span.small {
+    font-size: 0.88rem;
+  }
+  .schedule table td .live_icon {
+    width: 69px;
+  }
+  .schedule table td:first-child {
+    padding-left: 16px;
+    width: 120px;
+  }
+  .schedule table td:last-child {
+    width: 390px;
+    padding: 16px;
+  }
+  .delivery {
+    padding: 0 56px 56px;
+  }
+  .delivery .inner .wrap .img-box {
+    margin-right: 32px;
+  }
+  .delivery .inner .wrap .img-box img {
+    width: 378px;
+  }
+  .delivery .inner .wrap .delivery-box h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+  }
+  .delivery .inner .wrap .delivery-box p {
+    width: 631px;
+    margin-bottom: 24px;
+    font-size: 1rem;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card {
+    margin: 0 24px 24px 0;
+    width: 320px;
+    height: 104px;
+    border-radius: 8px;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card:hover {
+    transform: translate(3px, 3px);
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card:nth-child(2) {
+    margin-right: 0;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card .icon {
+    width: 72px;
+    margin: 0 16px;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card p {
+    width: 160px;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+  .delivery .inner .wrap .delivery-box .link-wrap a.link-card .arrow {
+    width: 20px;
+    margin-left: 30px;
+  }
+  .delivery .inner .wrap .delivery-box p.use {
+    font-size: 0.75rem;
+  }
+  .about-rch {
+    padding: 24px 0 15px;
+  }
+  .about-rch h2 {
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+  }
+  .about-rch p {
+    width: 480px;
+    font-size: 0.88rem;
+  }
+}/*# sourceMappingURL=live202504-rintarosasaki.css.map */

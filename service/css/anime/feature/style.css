@@ -1,0 +1,1877 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Arial, Verdana, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #101010;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+h2 {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  h2 {
+    margin-bottom: 24px;
+  }
+}
+h2 img {
+  width: auto;
+  height: 76px;
+  margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 767px) {
+  h2 img {
+    height: 50px;
+  }
+}
+h2 span {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 27px;
+}
+@media screen and (max-width: 767px) {
+  h2 span {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+}
+
+header {
+  padding: 1rem;
+  border-top: 2px solid #bf0000;
+  border-bottom: 1px solid #ebebeb;
+  background-color: #fff;
+}
+header a {
+  display: inline-block;
+  text-decoration: none;
+}
+header .RchLogo {
+  padding: 9px 0 3px;
+}
+header .RchLogo img {
+  max-width: 134px;
+  height: auto;
+}
+header .headerInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 1088px;
+  margin: 0 auto;
+}
+header ul {
+  margin: 0;
+  padding: 0;
+}
+header .otherItems {
+  margin-left: auto;
+  font-size: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .otherItems > * {
+  margin-right: 1rem;
+}
+header .otherItems > *:last-child {
+  margin-right: 0;
+}
+header .otherItems .boxSns span,
+header .otherItems a.help span {
+  margin-top: 2px;
+}
+header .otherItems .boxSns a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #686868;
+}
+header .otherItems .boxSns a:hover {
+  opacity: 0.8;
+}
+header .otherItems .boxSns a:hover span.show_sp {
+  color: #1b9df0;
+}
+header .otherItems .boxSns a img {
+  width: 32px;
+}
+header .otherItems .boxSns a span {
+  text-align: center;
+}
+header .otherItems .boxSns a span.show_sp {
+  display: block;
+}
+header .otherItems .boxSns a span.show_pc {
+  display: none;
+}
+header .otherItems a.help {
+  color: #686868;
+}
+header .otherItems a.help span {
+  display: block;
+}
+header .otherItems a.help:before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDEuMjVDOC4yNjk0MiAxLjI1IDYuNTc3NjkgMS43NjMxOCA1LjEzODc2IDIuNzI0NjRDMy42OTk4MyAzLjY4NjEgMi41NzgzMiA1LjA1MjY3IDEuOTE2MDYgNi42NTE1MkMxLjI1Mzc5IDguMjUwMzcgMS4wODA1MSAxMC4wMDk3IDEuNDE4MTMgMTEuNzA3QzEuNzU1NzUgMTMuNDA0NCAyLjU4OTExIDE0Ljk2MzUgMy44MTI4MiAxNi4xODcyQzUuMDM2NTMgMTcuNDEwOSA2LjU5NTYzIDE4LjI0NDMgOC4yOTI5NiAxOC41ODE5QzkuOTkwMyAxOC45MTk1IDExLjc0OTYgMTguNzQ2MiAxMy4zNDg1IDE4LjA4MzlDMTQuOTQ3MyAxNy40MjE3IDE2LjMxMzkgMTYuMzAwMiAxNy4yNzU0IDE0Ljg2MTJDMTguMjM2OCAxMy40MjIzIDE4Ljc1IDExLjczMDYgMTguNzUgMTBDMTguNzUgNy42NzkzNiAxNy44MjgxIDUuNDUzNzYgMTYuMTg3MiAzLjgxMjgyQzE0LjU0NjIgMi4xNzE4NyAxMi4zMjA2IDEuMjUgMTAgMS4yNVYxLjI1Wk0xMCAxNy41QzguNTE2NjQgMTcuNSA3LjA2NjYgMTcuMDYwMSA1LjgzMzIzIDE2LjIzNkM0LjU5OTg2IDE1LjQxMTkgMy42Mzg1NiAxNC4yNDA2IDMuMDcwOTEgMTIuODcwMUMyLjUwMzI1IDExLjQ5OTcgMi4zNTQ3MyA5Ljk5MTY4IDIuNjQ0MTEgOC41MzY4MkMyLjkzMzUgNy4wODE5NyAzLjY0NzgxIDUuNzQ1NTkgNC42OTY3IDQuNjk2N0M1Ljc0NTYgMy42NDc4MSA3LjA4MTk3IDIuOTMzNSA4LjUzNjgzIDIuNjQ0MTFDOS45OTE2OCAyLjM1NDcyIDExLjQ5OTcgMi41MDMyNSAxMi44NzAxIDMuMDcwOUMxNC4yNDA2IDMuNjM4NTYgMTUuNDExOSA0LjU5OTg1IDE2LjIzNiA1LjgzMzIyQzE3LjA2MDEgNy4wNjY1OSAxNy41IDguNTE2NjQgMTcuNSAxMEMxNy41IDExLjk4OTEgMTYuNzA5OCAxMy44OTY4IDE1LjMwMzMgMTUuMzAzM0MxMy44OTY4IDE2LjcwOTggMTEuOTg5MSAxNy41IDEwIDE3LjVaIiBmaWxsPSIjOUM5QzlDIi8+CjxwYXRoIGQ9Ik04Ljk3NDkgMTEuMzkzOFYxMC45NjI1QzguOTcwNjUgMTAuNTg0NiA5LjA1ODYxIDEwLjIxMTMgOS4yMzExNSA5Ljg3NTAzQzkuNDc5MzcgOS40Njg3NyA5LjgxNzEzIDkuMTI0NTkgMTAuMjE4NyA4Ljg2ODc4QzEwLjQ5NTMgOC42ODcyNCAxMC43NDIgOC40NjM3MyAxMC45NDk5IDguMjA2MjhDMTEuMDc4NCA4LjAyMzczIDExLjE0NDIgNy44MDQ0MSAxMS4xMzc0IDcuNTgxMjhDMTEuMTQxNyA3LjQ1OTk0IDExLjExNjEgNy4zMzk0MSAxMS4wNjI2IDcuMjMwMzhDMTEuMDA5MiA3LjEyMTM1IDEwLjkyOTcgNy4wMjcyIDEwLjgzMTIgNi45NTYyOEMxMC41ODI3IDYuODAyNjQgMTAuMjkwNyA2LjczNDU5IDkuOTk5OSA2Ljc2MjUzQzkuNjA2NjYgNi43NTU2OSA5LjIyMDcxIDYuODY5MDggOC44OTM2NSA3LjA4NzUzQzguNTc1MDMgNy4zMDAxNiA4LjI5NTg2IDcuNTY2NjQgOC4wNjg2NSA3Ljg3NTAzTDcuMTE4NjUgNi4zNDM3OEM3LjQ4NjUgNS45NDY1NCA3LjkyMjU2IDUuNjE4NDQgOC40MDYxNSA1LjM3NTAzQzguOTczNjMgNS4xMTI4NyA5LjU5Mzc0IDQuOTg0NTcgMTAuMjE4NyA1LjAwMDAzQzEwLjc1NDYgNC45ODkyOCAxMS4yODYzIDUuMDk4MTcgMTEuNzc0OSA1LjMxODc4QzEyLjE5NzYgNS41MTU2OCAxMi41NjE3IDUuODE5NDIgMTIuODMxMiA2LjIwMDAzQzEzLjA4NTQgNi41ODk4MyAxMy4yMTYxIDcuMDQ3MjYgMTMuMjA2MiA3LjUxMjUzQzEzLjIyMDEgNy45NTQzMSAxMy4xMDAzIDguMzkwMDEgMTIuODYyNCA4Ljc2MjUzQzEyLjU5OCA5LjE1MDYyIDEyLjI2MyA5LjQ4NTYgMTEuODc0OSA5Ljc1MDAzQzExLjYwMjMgOS45MzAzNyAxMS4zNjUgMTAuMTU5MSAxMS4xNzQ5IDEwLjQyNUMxMS4wNjY5IDEwLjYxNTUgMTEuMDEwOSAxMC44MzExIDExLjAxMjQgMTEuMDVWMTEuNDEyNUw4Ljk3NDkgMTEuMzkzOFpNOS45OTk5IDE1QzkuODIzMDQgMTUuMDA0MiA5LjY0NzE3IDE0Ljk3MjYgOS40ODI4NCAxNC45MDcxQzkuMzE4NTEgMTQuODQxNiA5LjE2OTEyIDE0Ljc0MzUgOS4wNDM2NSAxNC42MTg4QzguOTE0MDcgMTQuNDk4NyA4LjgxMTQyIDE0LjM1MjUgOC43NDI0NyAxNC4xODk4QzguNjczNTIgMTQuMDI3MSA4LjYzOTg0IDEzLjg1MTcgOC42NDM2NSAxMy42NzVDOC42Mzg5NSAxMy40OTczIDguNjcyMTkgMTMuMzIwNyA4Ljc0MTE3IDEzLjE1NjlDOC44MTAxNSAxMi45OTMxIDguOTEzMjcgMTIuODQ1OCA5LjA0MzY1IDEyLjcyNUM5LjE3MDE2IDEyLjYwMTcgOS4zMTk3NCAxMi41MDQ2IDkuNDgzODIgMTIuNDM5MkM5LjY0NzkgMTIuMzczOCA5LjgyMzI4IDEyLjM0MTQgOS45OTk5IDEyLjM0MzhDMTAuMzYwNiAxMi4zMzc2IDEwLjcwODkgMTIuNDc0NyAxMC45Njg3IDEyLjcyNUMxMS4wOTkgMTIuODQ1OCAxMS4yMDIyIDEyLjk5MzEgMTEuMjcxMSAxMy4xNTY5QzExLjM0MDEgMTMuMzIwNyAxMS4zNzM0IDEzLjQ5NzMgMTEuMzY4NyAxMy42NzVDMTEuMzcyNSAxMy44NTE3IDExLjMzODggMTQuMDI3MSAxMS4yNjk4IDE0LjE4OThDMTEuMjAwOSAxNC4zNTI1IDExLjA5ODIgMTQuNDk4NyAxMC45Njg3IDE0LjYxODhDMTAuODQxMSAxNC43NDQxIDEwLjY4OTUgMTQuODQyNSAxMC41MjMxIDE0LjkwOEMxMC4zNTY2IDE0Ljk3MzUgMTAuMTc4NyAxNS4wMDQ4IDkuOTk5OSAxNVYxNVoiIGZpbGw9IiM5QzlDOUMiLz4KPC9zdmc+Cg==");
+  content: "";
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 0;
+  background-size: contain;
+}
+header .otherItems a.help:hover {
+  color: #e80000;
+}
+header .otherItems a.help:hover::before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDEuMjVDOC4yNjk0MiAxLjI1IDYuNTc3NjkgMS43NjMxOCA1LjEzODc2IDIuNzI0NjRDMy42OTk4MyAzLjY4NjEgMi41NzgzMiA1LjA1MjY3IDEuOTE2MDYgNi42NTE1MkMxLjI1Mzc5IDguMjUwMzcgMS4wODA1MSAxMC4wMDk3IDEuNDE4MTMgMTEuNzA3QzEuNzU1NzUgMTMuNDA0NCAyLjU4OTExIDE0Ljk2MzUgMy44MTI4MiAxNi4xODcyQzUuMDM2NTMgMTcuNDEwOSA2LjU5NTYzIDE4LjI0NDMgOC4yOTI5NiAxOC41ODE5QzkuOTkwMyAxOC45MTk1IDExLjc0OTYgMTguNzQ2MiAxMy4zNDg1IDE4LjA4MzlDMTQuOTQ3MyAxNy40MjE3IDE2LjMxMzkgMTYuMzAwMiAxNy4yNzU0IDE0Ljg2MTJDMTguMjM2OCAxMy40MjIzIDE4Ljc1IDExLjczMDYgMTguNzUgMTBDMTguNzUgNy42NzkzNiAxNy44MjgxIDUuNDUzNzYgMTYuMTg3MiAzLjgxMjgyQzE0LjU0NjIgMi4xNzE4NyAxMi4zMjA2IDEuMjUgMTAgMS4yNVYxLjI1Wk0xMCAxNy41QzguNTE2NjQgMTcuNSA3LjA2NjYgMTcuMDYwMSA1LjgzMzIzIDE2LjIzNkM0LjU5OTg2IDE1LjQxMTkgMy42Mzg1NiAxNC4yNDA2IDMuMDcwOTEgMTIuODcwMUMyLjUwMzI1IDExLjQ5OTcgMi4zNTQ3MyA5Ljk5MTY4IDIuNjQ0MTEgOC41MzY4MkMyLjkzMzUgNy4wODE5NyAzLjY0NzgxIDUuNzQ1NTkgNC42OTY3IDQuNjk2N0M1Ljc0NTYgMy42NDc4MSA3LjA4MTk3IDIuOTMzNSA4LjUzNjgzIDIuNjQ0MTFDOS45OTE2OCAyLjM1NDcyIDExLjQ5OTcgMi41MDMyNSAxMi44NzAxIDMuMDcwOUMxNC4yNDA2IDMuNjM4NTYgMTUuNDExOSA0LjU5OTg1IDE2LjIzNiA1LjgzMzIyQzE3LjA2MDEgNy4wNjY1OSAxNy41IDguNTE2NjQgMTcuNSAxMEMxNy41IDExLjk4OTEgMTYuNzA5OCAxMy44OTY4IDE1LjMwMzMgMTUuMzAzM0MxMy44OTY4IDE2LjcwOTggMTEuOTg5MSAxNy41IDEwIDE3LjVaIiBmaWxsPSIjRTgwMDAwIi8+CjxwYXRoIGQ9Ik04Ljk3NDkgMTEuMzkzOFYxMC45NjI1QzguOTcwNjUgMTAuNTg0NiA5LjA1ODYxIDEwLjIxMTMgOS4yMzExNSA5Ljg3NTAzQzkuNDc5MzcgOS40Njg3NyA5LjgxNzEzIDkuMTI0NTkgMTAuMjE4NyA4Ljg2ODc4QzEwLjQ5NTMgOC42ODcyNCAxMC43NDIgOC40NjM3MyAxMC45NDk5IDguMjA2MjhDMTEuMDc4NCA4LjAyMzczIDExLjE0NDIgNy44MDQ0MSAxMS4xMzc0IDcuNTgxMjhDMTEuMTQxNyA3LjQ1OTk0IDExLjExNjEgNy4zMzk0MSAxMS4wNjI2IDcuMjMwMzhDMTEuMDA5MiA3LjEyMTM1IDEwLjkyOTcgNy4wMjcyIDEwLjgzMTIgNi45NTYyOEMxMC41ODI3IDYuODAyNjQgMTAuMjkwNyA2LjczNDU5IDkuOTk5OSA2Ljc2MjUzQzkuNjA2NjYgNi43NTU2OSA5LjIyMDcxIDYuODY5MDggOC44OTM2NSA3LjA4NzUzQzguNTc1MDMgNy4zMDAxNiA4LjI5NTg2IDcuNTY2NjQgOC4wNjg2NSA3Ljg3NTAzTDcuMTE4NjUgNi4zNDM3OEM3LjQ4NjUgNS45NDY1NCA3LjkyMjU2IDUuNjE4NDQgOC40MDYxNSA1LjM3NTAzQzguOTczNjMgNS4xMTI4NyA5LjU5Mzc0IDQuOTg0NTcgMTAuMjE4NyA1LjAwMDAzQzEwLjc1NDYgNC45ODkyOCAxMS4yODYzIDUuMDk4MTcgMTEuNzc0OSA1LjMxODc4QzEyLjE5NzYgNS41MTU2OCAxMi41NjE3IDUuODE5NDIgMTIuODMxMiA2LjIwMDAzQzEzLjA4NTQgNi41ODk4MyAxMy4yMTYxIDcuMDQ3MjYgMTMuMjA2MiA3LjUxMjUzQzEzLjIyMDEgNy45NTQzMSAxMy4xMDAzIDguMzkwMDEgMTIuODYyNCA4Ljc2MjUzQzEyLjU5OCA5LjE1MDYyIDEyLjI2MyA5LjQ4NTYgMTEuODc0OSA5Ljc1MDAzQzExLjYwMjMgOS45MzAzNyAxMS4zNjUgMTAuMTU5MSAxMS4xNzQ5IDEwLjQyNUMxMS4wNjY5IDEwLjYxNTUgMTEuMDEwOSAxMC44MzExIDExLjAxMjQgMTEuMDVWMTEuNDEyNUw4Ljk3NDkgMTEuMzkzOFpNOS45OTk5IDE1QzkuODIzMDQgMTUuMDA0MiA5LjY0NzE3IDE0Ljk3MjYgOS40ODI4NCAxNC45MDcxQzkuMzE4NTEgMTQuODQxNiA5LjE2OTEyIDE0Ljc0MzUgOS4wNDM2NSAxNC42MTg4QzguOTE0MDcgMTQuNDk4NyA4LjgxMTQyIDE0LjM1MjUgOC43NDI0NyAxNC4xODk4QzguNjczNTIgMTQuMDI3MSA4LjYzOTg0IDEzLjg1MTcgOC42NDM2NSAxMy42NzVDOC42Mzg5NSAxMy40OTczIDguNjcyMTkgMTMuMzIwNyA4Ljc0MTE3IDEzLjE1NjlDOC44MTAxNSAxMi45OTMxIDguOTEzMjcgMTIuODQ1OCA5LjA0MzY1IDEyLjcyNUM5LjE3MDE2IDEyLjYwMTcgOS4zMTk3NCAxMi41MDQ2IDkuNDgzODIgMTIuNDM5MkM5LjY0NzkgMTIuMzczOCA5LjgyMzI4IDEyLjM0MTQgOS45OTk5IDEyLjM0MzhDMTAuMzYwNiAxMi4zMzc2IDEwLjcwODkgMTIuNDc0NyAxMC45Njg3IDEyLjcyNUMxMS4wOTkgMTIuODQ1OCAxMS4yMDIyIDEyLjk5MzEgMTEuMjcxMSAxMy4xNTY5QzExLjM0MDEgMTMuMzIwNyAxMS4zNzM0IDEzLjQ5NzMgMTEuMzY4NyAxMy42NzVDMTEuMzcyNSAxMy44NTE3IDExLjMzODggMTQuMDI3MSAxMS4yNjk4IDE0LjE4OThDMTEuMjAwOSAxNC4zNTI1IDExLjA5ODIgMTQuNDk4NyAxMC45Njg3IDE0LjYxODhDMTAuODQxMSAxNC43NDQxIDEwLjY4OTUgMTQuODQyNSAxMC41MjMxIDE0LjkwOEMxMC4zNTY2IDE0Ljk3MzUgMTAuMTc4NyAxNS4wMDQ4IDkuOTk5OSAxNVYxNVoiIGZpbGw9IiNFODAwMDAiLz4KPC9zdmc+Cg==");
+}
+header .boxHelp {
+  margin-left: auto;
+  font-size: 0.875rem;
+}
+header .boxHelp a {
+  color: #686868;
+}
+header .boxHelp a:before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDEuMjVDOC4yNjk0MiAxLjI1IDYuNTc3NjkgMS43NjMxOCA1LjEzODc2IDIuNzI0NjRDMy42OTk4MyAzLjY4NjEgMi41NzgzMiA1LjA1MjY3IDEuOTE2MDYgNi42NTE1MkMxLjI1Mzc5IDguMjUwMzcgMS4wODA1MSAxMC4wMDk3IDEuNDE4MTMgMTEuNzA3QzEuNzU1NzUgMTMuNDA0NCAyLjU4OTExIDE0Ljk2MzUgMy44MTI4MiAxNi4xODcyQzUuMDM2NTMgMTcuNDEwOSA2LjU5NTYzIDE4LjI0NDMgOC4yOTI5NiAxOC41ODE5QzkuOTkwMyAxOC45MTk1IDExLjc0OTYgMTguNzQ2MiAxMy4zNDg1IDE4LjA4MzlDMTQuOTQ3MyAxNy40MjE3IDE2LjMxMzkgMTYuMzAwMiAxNy4yNzU0IDE0Ljg2MTJDMTguMjM2OCAxMy40MjIzIDE4Ljc1IDExLjczMDYgMTguNzUgMTBDMTguNzUgNy42NzkzNiAxNy44MjgxIDUuNDUzNzYgMTYuMTg3MiAzLjgxMjgyQzE0LjU0NjIgMi4xNzE4NyAxMi4zMjA2IDEuMjUgMTAgMS4yNVYxLjI1Wk0xMCAxNy41QzguNTE2NjQgMTcuNSA3LjA2NjYgMTcuMDYwMSA1LjgzMzIzIDE2LjIzNkM0LjU5OTg2IDE1LjQxMTkgMy42Mzg1NiAxNC4yNDA2IDMuMDcwOTEgMTIuODcwMUMyLjUwMzI1IDExLjQ5OTcgMi4zNTQ3MyA5Ljk5MTY4IDIuNjQ0MTEgOC41MzY4MkMyLjkzMzUgNy4wODE5NyAzLjY0NzgxIDUuNzQ1NTkgNC42OTY3IDQuNjk2N0M1Ljc0NTYgMy42NDc4MSA3LjA4MTk3IDIuOTMzNSA4LjUzNjgzIDIuNjQ0MTFDOS45OTE2OCAyLjM1NDcyIDExLjQ5OTcgMi41MDMyNSAxMi44NzAxIDMuMDcwOUMxNC4yNDA2IDMuNjM4NTYgMTUuNDExOSA0LjU5OTg1IDE2LjIzNiA1LjgzMzIyQzE3LjA2MDEgNy4wNjY1OSAxNy41IDguNTE2NjQgMTcuNSAxMEMxNy41IDExLjk4OTEgMTYuNzA5OCAxMy44OTY4IDE1LjMwMzMgMTUuMzAzM0MxMy44OTY4IDE2LjcwOTggMTEuOTg5MSAxNy41IDEwIDE3LjVaIiBmaWxsPSIjOUM5QzlDIi8+CjxwYXRoIGQ9Ik04Ljk3NDkgMTEuMzkzOFYxMC45NjI1QzguOTcwNjUgMTAuNTg0NiA5LjA1ODYxIDEwLjIxMTMgOS4yMzExNSA5Ljg3NTAzQzkuNDc5MzcgOS40Njg3NyA5LjgxNzEzIDkuMTI0NTkgMTAuMjE4NyA4Ljg2ODc4QzEwLjQ5NTMgOC42ODcyNCAxMC43NDIgOC40NjM3MyAxMC45NDk5IDguMjA2MjhDMTEuMDc4NCA4LjAyMzczIDExLjE0NDIgNy44MDQ0MSAxMS4xMzc0IDcuNTgxMjhDMTEuMTQxNyA3LjQ1OTk0IDExLjExNjEgNy4zMzk0MSAxMS4wNjI2IDcuMjMwMzhDMTEuMDA5MiA3LjEyMTM1IDEwLjkyOTcgNy4wMjcyIDEwLjgzMTIgNi45NTYyOEMxMC41ODI3IDYuODAyNjQgMTAuMjkwNyA2LjczNDU5IDkuOTk5OSA2Ljc2MjUzQzkuNjA2NjYgNi43NTU2OSA5LjIyMDcxIDYuODY5MDggOC44OTM2NSA3LjA4NzUzQzguNTc1MDMgNy4zMDAxNiA4LjI5NTg2IDcuNTY2NjQgOC4wNjg2NSA3Ljg3NTAzTDcuMTE4NjUgNi4zNDM3OEM3LjQ4NjUgNS45NDY1NCA3LjkyMjU2IDUuNjE4NDQgOC40MDYxNSA1LjM3NTAzQzguOTczNjMgNS4xMTI4NyA5LjU5Mzc0IDQuOTg0NTcgMTAuMjE4NyA1LjAwMDAzQzEwLjc1NDYgNC45ODkyOCAxMS4yODYzIDUuMDk4MTcgMTEuNzc0OSA1LjMxODc4QzEyLjE5NzYgNS41MTU2OCAxMi41NjE3IDUuODE5NDIgMTIuODMxMiA2LjIwMDAzQzEzLjA4NTQgNi41ODk4MyAxMy4yMTYxIDcuMDQ3MjYgMTMuMjA2MiA3LjUxMjUzQzEzLjIyMDEgNy45NTQzMSAxMy4xMDAzIDguMzkwMDEgMTIuODYyNCA4Ljc2MjUzQzEyLjU5OCA5LjE1MDYyIDEyLjI2MyA5LjQ4NTYgMTEuODc0OSA5Ljc1MDAzQzExLjYwMjMgOS45MzAzNyAxMS4zNjUgMTAuMTU5MSAxMS4xNzQ5IDEwLjQyNUMxMS4wNjY5IDEwLjYxNTUgMTEuMDEwOSAxMC44MzExIDExLjAxMjQgMTEuMDVWMTEuNDEyNUw4Ljk3NDkgMTEuMzkzOFpNOS45OTk5IDE1QzkuODIzMDQgMTUuMDA0MiA5LjY0NzE3IDE0Ljk3MjYgOS40ODI4NCAxNC45MDcxQzkuMzE4NTEgMTQuODQxNiA5LjE2OTEyIDE0Ljc0MzUgOS4wNDM2NSAxNC42MTg4QzguOTE0MDcgMTQuNDk4NyA4LjgxMTQyIDE0LjM1MjUgOC43NDI0NyAxNC4xODk4QzguNjczNTIgMTQuMDI3MSA4LjYzOTg0IDEzLjg1MTcgOC42NDM2NSAxMy42NzVDOC42Mzg5NSAxMy40OTczIDguNjcyMTkgMTMuMzIwNyA4Ljc0MTE3IDEzLjE1NjlDOC44MTAxNSAxMi45OTMxIDguOTEzMjcgMTIuODQ1OCA5LjA0MzY1IDEyLjcyNUM5LjE3MDE2IDEyLjYwMTcgOS4zMTk3NCAxMi41MDQ2IDkuNDgzODIgMTIuNDM5MkM5LjY0NzkgMTIuMzczOCA5LjgyMzI4IDEyLjM0MTQgOS45OTk5IDEyLjM0MzhDMTAuMzYwNiAxMi4zMzc2IDEwLjcwODkgMTIuNDc0NyAxMC45Njg3IDEyLjcyNUMxMS4wOTkgMTIuODQ1OCAxMS4yMDIyIDEyLjk5MzEgMTEuMjcxMSAxMy4xNTY5QzExLjM0MDEgMTMuMzIwNyAxMS4zNzM0IDEzLjQ5NzMgMTEuMzY4NyAxMy42NzVDMTEuMzcyNSAxMy44NTE3IDExLjMzODggMTQuMDI3MSAxMS4yNjk4IDE0LjE4OThDMTEuMjAwOSAxNC4zNTI1IDExLjA5ODIgMTQuNDk4NyAxMC45Njg3IDE0LjYxODhDMTAuODQxMSAxNC43NDQxIDEwLjY4OTUgMTQuODQyNSAxMC41MjMxIDE0LjkwOEMxMC4zNTY2IDE0Ljk3MzUgMTAuMTc4NyAxNS4wMDQ4IDkuOTk5OSAxNVYxNVoiIGZpbGw9IiM5QzlDOUMiLz4KPC9zdmc+Cg==");
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 0.5rem;
+}
+header .boxHelp a:hover {
+  color: #e80000;
+}
+header .boxHelp a:hover::before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDEuMjVDOC4yNjk0MiAxLjI1IDYuNTc3NjkgMS43NjMxOCA1LjEzODc2IDIuNzI0NjRDMy42OTk4MyAzLjY4NjEgMi41NzgzMiA1LjA1MjY3IDEuOTE2MDYgNi42NTE1MkMxLjI1Mzc5IDguMjUwMzcgMS4wODA1MSAxMC4wMDk3IDEuNDE4MTMgMTEuNzA3QzEuNzU1NzUgMTMuNDA0NCAyLjU4OTExIDE0Ljk2MzUgMy44MTI4MiAxNi4xODcyQzUuMDM2NTMgMTcuNDEwOSA2LjU5NTYzIDE4LjI0NDMgOC4yOTI5NiAxOC41ODE5QzkuOTkwMyAxOC45MTk1IDExLjc0OTYgMTguNzQ2MiAxMy4zNDg1IDE4LjA4MzlDMTQuOTQ3MyAxNy40MjE3IDE2LjMxMzkgMTYuMzAwMiAxNy4yNzU0IDE0Ljg2MTJDMTguMjM2OCAxMy40MjIzIDE4Ljc1IDExLjczMDYgMTguNzUgMTBDMTguNzUgNy42NzkzNiAxNy44MjgxIDUuNDUzNzYgMTYuMTg3MiAzLjgxMjgyQzE0LjU0NjIgMi4xNzE4NyAxMi4zMjA2IDEuMjUgMTAgMS4yNVYxLjI1Wk0xMCAxNy41QzguNTE2NjQgMTcuNSA3LjA2NjYgMTcuMDYwMSA1LjgzMzIzIDE2LjIzNkM0LjU5OTg2IDE1LjQxMTkgMy42Mzg1NiAxNC4yNDA2IDMuMDcwOTEgMTIuODcwMUMyLjUwMzI1IDExLjQ5OTcgMi4zNTQ3MyA5Ljk5MTY4IDIuNjQ0MTEgOC41MzY4MkMyLjkzMzUgNy4wODE5NyAzLjY0NzgxIDUuNzQ1NTkgNC42OTY3IDQuNjk2N0M1Ljc0NTYgMy42NDc4MSA3LjA4MTk3IDIuOTMzNSA4LjUzNjgzIDIuNjQ0MTFDOS45OTE2OCAyLjM1NDcyIDExLjQ5OTcgMi41MDMyNSAxMi44NzAxIDMuMDcwOUMxNC4yNDA2IDMuNjM4NTYgMTUuNDExOSA0LjU5OTg1IDE2LjIzNiA1LjgzMzIyQzE3LjA2MDEgNy4wNjY1OSAxNy41IDguNTE2NjQgMTcuNSAxMEMxNy41IDExLjk4OTEgMTYuNzA5OCAxMy44OTY4IDE1LjMwMzMgMTUuMzAzM0MxMy44OTY4IDE2LjcwOTggMTEuOTg5MSAxNy41IDEwIDE3LjVaIiBmaWxsPSIjRTgwMDAwIi8+CjxwYXRoIGQ9Ik04Ljk3NDkgMTEuMzkzOFYxMC45NjI1QzguOTcwNjUgMTAuNTg0NiA5LjA1ODYxIDEwLjIxMTMgOS4yMzExNSA5Ljg3NTAzQzkuNDc5MzcgOS40Njg3NyA5LjgxNzEzIDkuMTI0NTkgMTAuMjE4NyA4Ljg2ODc4QzEwLjQ5NTMgOC42ODcyNCAxMC43NDIgOC40NjM3MyAxMC45NDk5IDguMjA2MjhDMTEuMDc4NCA4LjAyMzczIDExLjE0NDIgNy44MDQ0MSAxMS4xMzc0IDcuNTgxMjhDMTEuMTQxNyA3LjQ1OTk0IDExLjExNjEgNy4zMzk0MSAxMS4wNjI2IDcuMjMwMzhDMTEuMDA5MiA3LjEyMTM1IDEwLjkyOTcgNy4wMjcyIDEwLjgzMTIgNi45NTYyOEMxMC41ODI3IDYuODAyNjQgMTAuMjkwNyA2LjczNDU5IDkuOTk5OSA2Ljc2MjUzQzkuNjA2NjYgNi43NTU2OSA5LjIyMDcxIDYuODY5MDggOC44OTM2NSA3LjA4NzUzQzguNTc1MDMgNy4zMDAxNiA4LjI5NTg2IDcuNTY2NjQgOC4wNjg2NSA3Ljg3NTAzTDcuMTE4NjUgNi4zNDM3OEM3LjQ4NjUgNS45NDY1NCA3LjkyMjU2IDUuNjE4NDQgOC40MDYxNSA1LjM3NTAzQzguOTczNjMgNS4xMTI4NyA5LjU5Mzc0IDQuOTg0NTcgMTAuMjE4NyA1LjAwMDAzQzEwLjc1NDYgNC45ODkyOCAxMS4yODYzIDUuMDk4MTcgMTEuNzc0OSA1LjMxODc4QzEyLjE5NzYgNS41MTU2OCAxMi41NjE3IDUuODE5NDIgMTIuODMxMiA2LjIwMDAzQzEzLjA4NTQgNi41ODk4MyAxMy4yMTYxIDcuMDQ3MjYgMTMuMjA2MiA3LjUxMjUzQzEzLjIyMDEgNy45NTQzMSAxMy4xMDAzIDguMzkwMDEgMTIuODYyNCA4Ljc2MjUzQzEyLjU5OCA5LjE1MDYyIDEyLjI2MyA5LjQ4NTYgMTEuODc0OSA5Ljc1MDAzQzExLjYwMjMgOS45MzAzNyAxMS4zNjUgMTAuMTU5MSAxMS4xNzQ5IDEwLjQyNUMxMS4wNjY5IDEwLjYxNTUgMTEuMDEwOSAxMC44MzExIDExLjAxMjQgMTEuMDVWMTEuNDEyNUw4Ljk3NDkgMTEuMzkzOFpNOS45OTk5IDE1QzkuODIzMDQgMTUuMDA0MiA5LjY0NzE3IDE0Ljk3MjYgOS40ODI4NCAxNC45MDcxQzkuMzE4NTEgMTQuODQxNiA5LjE2OTEyIDE0Ljc0MzUgOS4wNDM2NSAxNC42MTg4QzguOTE0MDcgMTQuNDk4NyA4LjgxMTQyIDE0LjM1MjUgOC43NDI0NyAxNC4xODk4QzguNjczNTIgMTQuMDI3MSA4LjYzOTg0IDEzLjg1MTcgOC42NDM2NSAxMy42NzVDOC42Mzg5NSAxMy40OTczIDguNjcyMTkgMTMuMzIwNyA4Ljc0MTE3IDEzLjE1NjlDOC44MTAxNSAxMi45OTMxIDguOTEzMjcgMTIuODQ1OCA5LjA0MzY1IDEyLjcyNUM5LjE3MDE2IDEyLjYwMTcgOS4zMTk3NCAxMi41MDQ2IDkuNDgzODIgMTIuNDM5MkM5LjY0NzkgMTIuMzczOCA5LjgyMzI4IDEyLjM0MTQgOS45OTk5IDEyLjM0MzhDMTAuMzYwNiAxMi4zMzc2IDEwLjcwODkgMTIuNDc0NyAxMC45Njg3IDEyLjcyNUMxMS4wOTkgMTIuODQ1OCAxMS4yMDIyIDEyLjk5MzEgMTEuMjcxMSAxMy4xNTY5QzExLjM0MDEgMTMuMzIwNyAxMS4zNzM0IDEzLjQ5NzMgMTEuMzY4NyAxMy42NzVDMTEuMzcyNSAxMy44NTE3IDExLjMzODggMTQuMDI3MSAxMS4yNjk4IDE0LjE4OThDMTEuMjAwOSAxNC4zNTI1IDExLjA5ODIgMTQuNDk4NyAxMC45Njg3IDE0LjYxODhDMTAuODQxMSAxNC43NDQxIDEwLjY4OTUgMTQuODQyNSAxMC41MjMxIDE0LjkwOEMxMC4zNTY2IDE0Ljk3MzUgMTAuMTc4NyAxNS4wMDQ4IDkuOTk5OSAxNVYxNVoiIGZpbGw9IiNFODAwMDAiLz4KPC9zdmc+Cg==");
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f7f7f7;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer > * {
+  margin: 0 0 1rem 0;
+}
+footer > *:last-child {
+  margin: 0 0 0 0;
+}
+footer .boxItems {
+  text-align: left;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+footer .listItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #686868;
+  padding: 0 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1em;
+}
+@media screen and (max-width: 767px) {
+  footer .listItems {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+}
+footer .listItems .consentLogo {
+  width: 43px;
+  height: 43px;
+  margin-right: 0.5rem;
+}
+@media screen and (max-width: 767px) {
+  footer .listItems .consentLogo {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5rem;
+  }
+}
+footer .listItems a {
+  text-decoration: none;
+  color: #181818;
+}
+footer .listItems a:hover {
+  color: #e80000;
+}
+footer .listItems > li {
+  margin-bottom: 0.75rem;
+  margin-right: 1rem;
+}
+footer .listItems > li:last-child {
+  margin-right: 0;
+}
+footer .listItems > li img {
+  display: inline;
+  vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+  footer .listItems > li {
+    margin-bottom: 0.75rem;
+    margin-right: 1rem;
+  }
+}
+footer small {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  text-align: center;
+  color: #828282;
+  display: block;
+  font-size: 0.625rem;
+}
+footer .fcbLogo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 1rem 0 0;
+}
+footer .fcbLogo img {
+  display: inline-block;
+}
+
+.breadcrumb {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.breadcrumb > ol {
+  margin: 0;
+  padding: 0.875rem 0.75rem;
+}
+.breadcrumb > ol li:not(:last-of-type)::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.19062 0.9375L2.74687 1.37812L6.36875 5L2.74687 8.62188L3.19062 9.0625L7.25312 5L3.19062 0.9375Z' fill='%23828282'/%3E%3C/svg%3E%0A");
+  background-repeat: none;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+.breadcrumb > ol > li {
+  padding: 0;
+  margin-right: 0.25rem;
+  display: inline-block;
+  list-style-type: none;
+  font-size: 0.75rem;
+}
+.breadcrumb > ol > li:last-child {
+  margin-right: 0;
+}
+.breadcrumb > ol > li:last-child::after {
+  background-image: none;
+  display: none;
+}
+.breadcrumb > ol > li::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.19062 0.9375L2.74687 1.37812L6.36875 5L2.74687 8.62188L3.19062 9.0625L7.25312 5L3.19062 0.9375Z' fill='%23828282'/%3E%3C/svg%3E%0A");
+  background-repeat: none;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+.breadcrumb > ol > li a {
+  text-decoration: none;
+}
+.breadcrumb > ol > li a:hover {
+  text-decoration: underline;
+}
+.breadcrumb > ol > li > * {
+  color: #828282;
+}
+.breadcrumb > ol > li::before {
+  content: "";
+}
+
+.toTop {
+  display: none;
+  position: fixed;
+  bottom: 117px;
+  right: 12px;
+}
+
+.toTop:hover {
+  -webkit-filter: contrast(0.86);
+          filter: contrast(0.86);
+}
+
+.toTop .toTop-btn {
+  cursor: pointer;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: #fff;
+  -webkit-box-shadow: 0 1.25px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1.25px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+}
+@media screen and (max-width: 767px) {
+  .toTop .toTop-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.toTop .toTop-btn img {
+  width: 18px;
+}
+
+.toTop .toTop-btn img {
+  width: 28px;
+}
+
+.footer_fix_btn {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 104px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.footer_fix_btn .boxWatchBtn {
+  width: 100%;
+}
+
+.footer_fix_btn .boxWatchBtn .wrap {
+  padding: 10.5px 9.5px;
+}
+
+.footer_fix_btn .boxWatchBtn p {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer_fix_btn .boxWatchBtn a {
+  position: relative;
+  width: 375px;
+  height: 52px;
+  margin: auto;
+  padding-right: 20px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 52px;
+  border-radius: 50px;
+  background: #bf0000;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .footer_fix_btn .boxWatchBtn a {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+.footer_fix_btn .boxWatchBtn a::before, .footer_fix_btn .boxWatchBtn a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  pointer-events: none;
+}
+@media screen and (max-width: 767px) {
+  .footer_fix_btn .boxWatchBtn a::before, .footer_fix_btn .boxWatchBtn a::after {
+    right: 30px;
+    width: 10px;
+    height: 2px;
+  }
+}
+.footer_fix_btn .boxWatchBtn a::before {
+  -webkit-transform: rotate(45deg) translateY(-4px);
+          transform: rotate(45deg) translateY(-4px);
+}
+@media screen and (max-width: 767px) {
+  .footer_fix_btn .boxWatchBtn a::before {
+    -webkit-transform: rotate(45deg) translateY(-4px);
+            transform: rotate(45deg) translateY(-4px);
+  }
+}
+.footer_fix_btn .boxWatchBtn a::after {
+  -webkit-transform: rotate(-45deg) translateY(4px);
+          transform: rotate(-45deg) translateY(4px);
+}
+@media screen and (max-width: 767px) {
+  .footer_fix_btn .boxWatchBtn a::after {
+    -webkit-transform: rotate(-45deg) translateY(4px);
+            transform: rotate(-45deg) translateY(4px);
+  }
+}
+
+.footer_fix_btn .boxWatchBtn a:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 1.5rem;
+  }
+  header .RchLogo {
+    padding: 1px 0;
+    height: 36px;
+  }
+  header .RchLogo img {
+    max-width: 156px;
+    height: auto;
+  }
+  header .otherItems {
+    font-size: 0.875rem;
+  }
+  header .otherItems > * {
+    margin-right: 1.5rem;
+  }
+  header .otherItems .boxSns span,
+  header .otherItems a.help span {
+    margin-top: 0;
+  }
+  header .otherItems .boxSns a:hover span {
+    text-decoration: underline;
+    color: #1b9df0;
+  }
+  header .otherItems .boxSns a:hover span.show_pc {
+    border-color: #1b9df0;
+  }
+  header .otherItems .boxSns a:hover span.show_pc::before {
+    border-left-color: #1b9df0;
+  }
+  header .otherItems .boxSns a img {
+    width: 32px;
+  }
+  header .otherItems .boxSns a span.show_sp {
+    display: none;
+  }
+  header .otherItems .boxSns a span.show_pc {
+    margin-right: 8px;
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid #9c9c9c;
+    border-radius: 4px;
+    position: relative;
+  }
+  header .otherItems .boxSns a span.show_pc::before, header .otherItems .boxSns a span.show_pc::after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  header .otherItems .boxSns a span.show_pc::before {
+    border-color: rgba(51, 51, 51, 0);
+    border-left-color: #9c9c9c;
+    border-width: 7px;
+    margin-top: -7px;
+  }
+  header .otherItems .boxSns a span.show_pc::after {
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #fff;
+    border-width: 5px;
+    margin-top: -5px;
+  }
+  header .otherItems a.help {
+    margin-right: 0.5rem;
+  }
+  header .otherItems a.help span {
+    display: inline-block;
+  }
+  header .otherItems a.help:before {
+    width: 20px;
+    height: 20px;
+  }
+  .boxBnr {
+    padding: 3rem 1rem;
+  }
+  .boxBnrTop {
+    padding: 1rem 1rem;
+  }
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .boxItems {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  footer .listItems {
+    font-size: 1rem;
+    padding: 0;
+    margin-bottom: 1rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0;
+  }
+  footer .listItems .consentLogo {
+    width: 43px;
+    height: 43px;
+    margin-right: 0.5rem;
+  }
+  footer .listItems a {
+    color: #686868;
+  }
+  footer .listItems > li {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  footer small {
+    margin: 1.5rem 0 1.5rem 0.5rem;
+    text-align: left;
+    margin-left: 0;
+    font-size: 0.875rem;
+  }
+  footer .fcbLogo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 0 2.5rem 0 0;
+  }
+  .breadcrumb {
+    min-width: 768px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .breadcrumb > ol {
+    max-width: 1088px;
+    margin: 0 auto;
+    padding: 0.875rem 0;
+  }
+}
+.showSP {
+  display: none !important;
+}
+@media screen and (max-width: 767px) {
+  .showSP {
+    display: block !important;
+  }
+}
+
+.showPC {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .showPC {
+    display: none !important;
+  }
+}
+
+main > * {
+  margin-bottom: 1rem;
+}
+main > *:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  main {
+    font-weight: 700;
+  }
+}
+
+.inner {
+  width: 91%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.header_img {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .header_img {
+    margin-bottom: 30px;
+  }
+}
+
+.carousel {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel_item {
+  width: 100%;
+}
+.carousel_item img {
+  width: 100%;
+}
+.carousel .slick-list {
+  width: 100%;
+  overflow: visible;
+}
+.carousel .slick-slide {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 767px) {
+  .carousel .slick-slide {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.carousel .slick-next,
+.carousel .slick-prev {
+  display: none;
+}
+.carousel .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.carousel .slick-dots li {
+  width: 15px;
+  height: 15px;
+  margin: 0 10px;
+  border: solid 1.8px #101010;
+  border-radius: 3.75px;
+  background: #fff;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .carousel .slick-dots li {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+  }
+}
+.carousel .slick-dots li:hover,
+.carousel .slick-dots li.slick-active {
+  background: #101010;
+}
+.carousel .slick-dots li button {
+  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 62px;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .nav {
+    gap: 8px;
+    margin-bottom: 54px;
+  }
+}
+.nav_item {
+  width: 24%;
+  height: 70px;
+}
+@media screen and (max-width: 767px) {
+  .nav_item {
+    width: 48%;
+    height: 55px;
+  }
+}
+.nav_item a {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  padding: 14px 0;
+  border: solid 1.4px #101010;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 0 #000;
+          box-shadow: 0 3px 0 #000;
+  font-size: clamp(0.875rem, -0.537rem + 2.94vw, 1.375rem);
+}
+@media screen and (max-width: 767px) {
+  .nav_item a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.nav_item a img {
+  width: clamp(1.25rem, -1.397rem + 5.51vw, 2.188rem);
+  height: clamp(1.25rem, -1.397rem + 5.51vw, 2.188rem);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.nav_item:first-of-type a {
+  background-color: #ffdde4;
+}
+.nav_item:nth-of-type(2) a {
+  background-color: #ffecba;
+}
+.nav_item:nth-of-type(3) a {
+  padding-right: 20px;
+  background-color: #d2ecfa;
+}
+@media screen and (max-width: 767px) {
+  .nav_item:nth-of-type(3) a {
+    padding-right: 30px;
+  }
+}
+.nav_item:nth-of-type(4) a {
+  background-color: #dbf8c8;
+}
+
+section {
+  position: relative;
+  padding: 80px 0 64px;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 767px) {
+  section {
+    padding: 44px 0 40px;
+  }
+}
+
+#channel::before,
+#ranking::before,
+#generation::before,
+#genre::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 22px;
+  background-image: url(../../../img/anime/feature/line.png);
+  background-repeat: repeat-x;
+}
+
+.grid {
+  background-image: repeating-linear-gradient(to bottom, transparent 49px, rgba(255, 255, 255, 0.5) 50px, rgba(255, 255, 255, 0.5) 50px, transparent 51px, transparent 99px, rgba(255, 255, 255, 0.5) 100px, rgba(255, 255, 255, 0.5) 100px, transparent 101px, transparent 149px, rgba(255, 255, 255, 0.5) 150px, rgba(255, 255, 255, 0.5) 150px, transparent 151px, transparent 199px, rgba(255, 255, 255, 0.5) 200px, rgba(255, 255, 255, 0.5) 200px, transparent 201px, transparent 249px), repeating-linear-gradient(to right, transparent 49px, rgba(255, 255, 255, 0.5) 50px, rgba(255, 255, 255, 0.5) 50px, transparent 51px, transparent 99px, rgba(255, 255, 255, 0.5) 100px, rgba(255, 255, 255, 0.5) 100px, transparent 101px, transparent 149px, rgba(255, 255, 255, 0.5) 150px, rgba(255, 255, 255, 0.5) 150px, transparent 151px, transparent 199px, rgba(255, 255, 255, 0.5) 200px, rgba(255, 255, 255, 0.5) 200px, transparent 201px, transparent 249px);
+}
+
+.btn_red a {
+  position: relative;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: 100px;
+  margin: 0 auto;
+  padding-right: 60px;
+  background-color: #bd1319;
+  -webkit-box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+  font-size: clamp(1.75rem, 0.338rem + 2.94vw, 2.25rem);
+  line-height: 100px;
+}
+@media screen and (max-width: 767px) {
+  .btn_red a {
+    height: 56px;
+    padding-right: 30px;
+    font-size: 18px;
+    line-height: 56px;
+  }
+}
+.btn_red a::before, .btn_red a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  pointer-events: none;
+}
+@media screen and (max-width: 767px) {
+  .btn_red a::before, .btn_red a::after {
+    right: 40px;
+    width: 10px;
+    height: 2px;
+  }
+}
+.btn_red a::before {
+  -webkit-transform: rotate(45deg) translateY(-9px);
+          transform: rotate(45deg) translateY(-9px);
+}
+@media screen and (max-width: 767px) {
+  .btn_red a::before {
+    -webkit-transform: rotate(45deg) translateY(-4px);
+            transform: rotate(45deg) translateY(-4px);
+  }
+}
+.btn_red a::after {
+  -webkit-transform: rotate(-45deg) translateY(9px);
+          transform: rotate(-45deg) translateY(9px);
+}
+@media screen and (max-width: 767px) {
+  .btn_red a::after {
+    -webkit-transform: rotate(-45deg) translateY(4px);
+            transform: rotate(-45deg) translateY(4px);
+  }
+}
+.btn_red a:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(3px, 3px);
+          transform: translate(3px, 3px);
+  background-color: #ff1212;
+  border-color: #ff1212;
+}
+
+.btn_mid {
+  position: relative;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  width: 84%;
+  max-width: 436px;
+  height: 68px;
+  margin: 0 auto;
+  padding-right: 30px;
+  background-color: #101010;
+  font-size: clamp(1.063rem, -1.585rem + 5.51vw, 2rem);
+  line-height: 68px;
+}
+@media screen and (max-width: 767px) {
+  .btn_mid {
+    height: 38px;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 38px;
+  }
+}
+.btn_mid::before, .btn_mid::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  display: block;
+  width: 12px;
+  height: 3px;
+  background-color: #fff;
+  pointer-events: none;
+}
+.btn_mid::before {
+  -webkit-transform: rotate(45deg) translateY(-5px);
+          transform: rotate(45deg) translateY(-5px);
+}
+.btn_mid::after {
+  -webkit-transform: rotate(-45deg) translateY(5px);
+          transform: rotate(-45deg) translateY(5px);
+}
+.btn_mid a {
+  display: block;
+}
+
+.btn_mini {
+  position: relative;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  max-width: 216px;
+  margin: 0 auto;
+  padding: 8px clamp(0.5rem, 0.412rem + 0.38vw, 0.75rem);
+  background-color: #101010;
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .btn_mini {
+    font-size: clamp(0.75rem, 0.321rem + 0.89vw, 1.125rem);
+  }
+}
+.btn_mini::before, .btn_mini::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: clamp(0.375rem, 0.089rem + 0.6vw, 0.625rem);
+  display: block;
+  width: 8px;
+  height: 2px;
+  background-color: #fff;
+  pointer-events: none;
+}
+.btn_mini::before {
+  -webkit-transform: rotate(45deg) translateY(-3px);
+          transform: rotate(45deg) translateY(-3px);
+}
+.btn_mini::after {
+  -webkit-transform: rotate(-45deg) translateY(3px);
+          transform: rotate(-45deg) translateY(3px);
+}
+.btn_mini a {
+  display: block;
+}
+
+.sub_header {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  width: 100vw;
+  height: 60px;
+  margin: 0 calc(50% - 50vw) 40px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  font-size: 32px;
+  text-align: center;
+  line-height: 60px;
+}
+@media screen and (max-width: 767px) {
+  .sub_header {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+}
+
+/* content default */
+.program_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .program_container {
+    gap: 20px 0;
+    margin-bottom: 40px;
+  }
+}
+
+.program_item {
+  width: 24%;
+  background-color: #fff;
+  border: solid 1.5px #101010;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 0 #000;
+          box-shadow: 0 3px 0 #000;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .program_item {
+    width: 48%;
+  }
+}
+.program_item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 8px;
+  height: 100%;
+  padding-bottom: 20px;
+}
+.program_item a h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 48px;
+  font-size: clamp(0.875rem, -0.537rem + 2.94vw, 1.375rem);
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .program_item a h4 {
+    height: 32px;
+  }
+}
+.program_item a h4.spaceNarrow {
+  letter-spacing: -0.02em;
+}
+.program_item a h4.mb_small {
+  margin-bottom: 4px;
+}
+.program_item a p {
+  padding: 0 12px;
+  font-size: clamp(0.75rem, -0.309rem + 2.21vw, 1.125rem);
+  line-height: 1.3333333333;
+}
+
+.program_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.program_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 12px 20px;
+}
+.program_txt h4 {
+  margin-bottom: 16px;
+  font-size: clamp(0.875rem, -0.537rem + 2.94vw, 1.375rem);
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .program_txt h4 {
+    margin-bottom: 8px;
+  }
+}
+.program_txt h4.spaceNarrow {
+  letter-spacing: -0.02em;
+}
+.program_txt h4.mb_small {
+  margin-bottom: 4px;
+}
+.program_txt p {
+  font-size: clamp(0.75rem, -0.309rem + 2.21vw, 1.125rem);
+  line-height: 1.3333333333;
+}
+
+/***************
+#channel
+***************/
+#channel.grid {
+  width: 100%;
+  background-color: #ffdde4;
+}
+
+.sub_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 43px;
+}
+@media screen and (max-width: 767px) {
+  .sub_nav {
+    gap: 16px 0;
+    margin-bottom: 18px;
+  }
+}
+.sub_navItem {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 16%;
+  max-width: 165px;
+  height: 66px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #fff;
+  border: solid 1px #101010;
+  border-radius: 8.7px;
+  -webkit-box-shadow: 0 4px 0 #000;
+          box-shadow: 0 4px 0 #000;
+  font-weight: 700;
+  font-size: clamp(0.875rem, -0.537rem + 2.94vw, 1.375rem);
+  line-height: 1.2em;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+}
+@media screen and (max-width: 767px) {
+  .sub_navItem {
+    width: 48%;
+    max-width: none;
+    height: 55px;
+  }
+}
+.sub_navItem::after {
+  display: none;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -36px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 24px;
+  height: 36px;
+  border-top: 18px solid #101010;
+  border-right: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 18px solid transparent;
+  z-index: -10;
+}
+@media screen and (max-width: 767px) {
+  .sub_navItem::after {
+    bottom: -33px;
+    border-top: 24px solid #101010;
+  }
+}
+.sub_navItem:hover, .sub_navItem.is_active {
+  background-color: #101010;
+  color: #fff;
+}
+.sub_navItem:hover::after, .sub_navItem.is_active::after {
+  display: block;
+}
+
+.channel {
+  display: none;
+  width: 100%;
+  border: solid 2px #101010;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 8px 0 #000;
+          box-shadow: 0 8px 0 #000;
+}
+@media screen and (max-width: 767px) {
+  .channel {
+    border-radius: 8px;
+  }
+}
+.channel.is_active {
+  display: block;
+}
+.channel_title {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  height: 72px;
+  background-color: #101010;
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 72px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .channel_title {
+    height: 48px;
+    font-size: 20px;
+    line-height: 48px;
+  }
+}
+.channel_content {
+  padding: 32px clamp(4.375rem, -7.978rem + 25.74vw, 8.75rem) 72px;
+  background-color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .channel_content {
+    padding: 16px 5% 32px;
+  }
+}
+.channel_item:first-of-type img {
+  width: 100%;
+}
+.channel_item:first-of-type .channel_itemTxt {
+  width: 100%;
+  margin: 12px 0 24px;
+}
+.channel_item:first-of-type .channel_itemTxt h4 {
+  display: none;
+}
+.channel_item:first-of-type .channel_itemTxt p {
+  font-size: 20px;
+  line-height: 1.5em;
+}
+@media screen and (max-width: 767px) {
+  .channel_item:first-of-type .channel_itemTxt p {
+    font-size: 15px;
+  }
+}
+.channel_item:not(:first-of-type) a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 170px;
+  margin-bottom: 24px;
+  background-color: #fff4f6;
+}
+@media screen and (max-width: 767px) {
+  .channel_item:not(:first-of-type) a {
+    height: 96px;
+  }
+}
+.channel_item:not(:first-of-type) img {
+  width: 290px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .channel_item:not(:first-of-type) img {
+    width: 50%;
+  }
+}
+.channel_item:not(:first-of-type) .channel_itemTxt {
+  padding: 20px 30px 20px 20px;
+}
+@media screen and (max-width: 767px) {
+  .channel_item:not(:first-of-type) .channel_itemTxt {
+    padding: 8px;
+  }
+}
+.channel_item:not(:first-of-type) .channel_itemTxt h4 {
+  font-size: clamp(1.25rem, 0.191rem + 2.21vw, 1.625rem);
+  font-weight: 700;
+  line-height: 1.7692307692;
+}
+@media screen and (max-width: 767px) {
+  .channel_item:not(:first-of-type) .channel_itemTxt h4 {
+    margin-bottom: 4px;
+    font-size: 15px;
+    line-height: 1.1em;
+    text-wrap: auto;
+  }
+}
+.channel_item:not(:first-of-type) .channel_itemTxt h4.spaceNarrow {
+  letter-spacing: -0.02em;
+}
+.channel_item:not(:first-of-type) .channel_itemTxt p {
+  font-size: clamp(1rem, 0.294rem + 1.47vw, 1.25rem);
+  line-height: 1.4;
+}
+.channel_item:not(:first-of-type) .channel_itemTxt p span.showPC {
+  display: inline;
+}
+@media screen and (max-width: 767px) {
+  .channel_item:not(:first-of-type) .channel_itemTxt p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}
+.channel_item:nth-of-type(4) {
+  margin-bottom: 48px;
+}
+@media screen and (max-width: 767px) {
+  .channel_item:nth-of-type(4) {
+    margin-bottom: 24px;
+  }
+}
+.channel .recommend_title {
+  font-size: 28px;
+  margin-bottom: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .channel .recommend_title {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+}
+.channel .recommend_item img {
+  width: 100%;
+}
+.channel .recommend_txt {
+  margin-bottom: 36px;
+  padding: 24px 32px 32px;
+  background-color: #101010;
+  color: #fff;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+@media screen and (max-width: 767px) {
+  .channel .recommend_txt {
+    margin-bottom: 24px;
+    padding: 8px;
+  }
+}
+.channel .recommend_txt h4 {
+  margin-bottom: 24px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5333333333;
+}
+.channel .recommend_txt h4 span.showPC {
+  display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .channel .recommend_txt h4 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.channel .recommend_txt p {
+  margin-bottom: 16px;
+  font-size: 22px;
+}
+@media screen and (max-width: 767px) {
+  .channel .recommend_txt p {
+    font-size: 13px;
+  }
+}
+.channel .recommend_good {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  min-height: 50px;
+  padding: 4px 6px;
+  background-color: #fff;
+  color: #bf0000;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .channel .recommend_good {
+    min-height: 36px;
+    font-size: 13px;
+  }
+}
+.channel .recommend_good img {
+  width: 20px;
+  height: auto;
+}
+.channel .btn_red a::before, .channel .btn_red a::after {
+  right: 30px;
+}
+
+/***************
+#ranking
+***************/
+#ranking.grid {
+  width: 100%;
+  background-color: #ffecba;
+}
+
+#ranking .program_container {
+  margin-bottom: 0;
+}
+#ranking .program_container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px 0;
+}
+@media screen and (max-width: 767px) {
+  #ranking .program_container .row {
+    width: 100%;
+  }
+}
+#ranking .program_container .row .program_rank {
+  width: 24%;
+}
+@media screen and (max-width: 768px) {
+  #ranking .program_container .row .program_rank {
+    width: 48%;
+  }
+}
+#ranking .program_container .row .program_rank .program_item {
+  width: 100%;
+}
+#ranking .program_container .row .program_rank .program_item a {
+  height: 100%;
+}
+#ranking .program_container .row .program_rank > p {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+}
+#ranking .program_container .row .program_rank > p span {
+  font-size: 16px;
+}
+@media screen and (max-width: 767px) {
+  #ranking .program_container .row_reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+#ranking .program_container > .program_rank {
+  width: 100%;
+}
+#ranking .program_container > .program_rank .program_item {
+  width: 100%;
+  max-width: 100%;
+  max-height: 283px;
+  margin-bottom: 80px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 767px) {
+  #ranking .program_container > .program_rank .program_item {
+    height: auto;
+    max-height: none;
+    margin-bottom: 0;
+  }
+}
+#ranking .program_container > .program_rank .program_item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+@media screen and (max-width: 767px) {
+  #ranking .program_container > .program_rank .program_item a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+#ranking .program_container > .program_rank .program_item a > * {
+  display: block;
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  #ranking .program_container > .program_rank .program_item a > * {
+    width: 100%;
+  }
+}
+#ranking .program_container > .program_rank .program_item img {
+  height: 100%;
+  min-height: 283px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  #ranking .program_container > .program_rank .program_item img {
+    height: 50%;
+    min-height: auto;
+  }
+}
+#ranking .program_container > .program_rank .program_item .program_txt {
+  width: 100%;
+  height: 100%;
+  min-height: 283px;
+  padding: 32px 24px 32px 16px;
+}
+@media screen and (max-width: 767px) {
+  #ranking .program_container > .program_rank .program_item .program_txt {
+    height: 50%;
+    min-height: auto;
+    padding: 8px 16px 16px;
+  }
+}
+#ranking .program_container > .program_rank .program_item .program_txt h4 {
+  margin-bottom: 16px;
+  font-size: clamp(1.5rem, 0.088rem + 2.94vw, 2rem);
+}
+@media screen and (max-width: 767px) {
+  #ranking .program_container > .program_rank .program_item .program_txt h4 {
+    font-size: 20px;
+  }
+}
+#ranking .program_container > .program_rank .program_item .program_txt p {
+  margin-bottom: clamp(1.875rem, 0.11rem + 3.68vw, 2.5rem);
+  font-size: clamp(1rem, 0.294rem + 1.47vw, 1.25rem);
+  line-height: 1.4;
+}
+@media screen and (max-width: 767px) {
+  #ranking .program_container > .program_rank .program_item .program_txt p {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+}
+#ranking .program_container > .program_rank > p {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+}
+#ranking .program_container > .program_rank > p span {
+  font-size: 24px;
+}
+
+/***************
+#generation
+***************/
+#generation.grid {
+  width: 100%;
+  background-color: #d2ecfa;
+}
+
+/***************
+#genre
+***************/
+#genre.grid {
+  width: 100%;
+  background-color: #dbf8c8;
+}
+
+#genre .spaceNarrow {
+  letter-spacing: -0.01em;
+}
+
+/***************
+#point
+***************/
+.point {
+  padding: 32px 0 40px;
+  background-color: #bf0000;
+}
+.point_lead {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background-color: #101010;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .point_lead {
+    font-size: 22px;
+  }
+}
+.point_head {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .point_head {
+    font-size: 26px;
+  }
+}
+.point_head span {
+  font-size: 32px;
+  margin: 0 8px;
+}
+@media screen and (max-width: 767px) {
+  .point_head span {
+    font-size: 22px;
+  }
+}
+.point_img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .point_img {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 46px;
+  }
+}
+.point_img::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  width: 10px;
+  height: 25px;
+  background-image: url(../../../img/anime/feature/icon/next.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: invert(80%);
+          filter: invert(80%);
+}
+@media screen and (max-width: 767px) {
+  .point_img::after {
+    -webkit-transform: rotate(90deg) translateX(calc(-50% - 6px)) translateY(calc(50% - 6px));
+            transform: rotate(90deg) translateX(calc(-50% - 6px)) translateY(calc(50% - 6px));
+  }
+}
+.point_img img {
+  position: relative;
+  width: 45%;
+  max-width: 472px;
+}
+@media screen and (max-width: 767px) {
+  .point_img img {
+    width: 100%;
+  }
+}
+.point .notice {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .point .notice {
+    font-size: 12px;
+    text-align: left;
+  }
+}
+.point .notice a {
+  text-decoration: underline;
+}
+
+/***************
+#device
+***************/
+.device {
+  padding: 48px 0 16px;
+}
+@media screen and (max-width: 767px) {
+  .device {
+    padding: 16px 0;
+  }
+}
+.device h3 {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  margin-bottom: 48px;
+  font-size: 32px;
+  color: #101010;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .device h3 {
+    margin-bottom: 24px;
+    font-size: 22px;
+  }
+}
+.device .imgWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.device_img {
+  width: 23%;
+  max-width: 230px;
+}
+@media screen and (max-width: 767px) {
+  .device_img {
+    width: 46%;
+    max-width: none;
+  }
+}
+.device_img img {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .device_img img {
+    margin-bottom: 8px;
+  }
+}
+.device_img p {
+  font-size: 18px;
+}
+.device_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .device_name {
+    height: auto;
+    margin-bottom: 16px;
+  }
+}
+.device .btn_red {
+  margin-bottom: 68px;
+}
+@media screen and (max-width: 767px) {
+  .device .btn_red {
+    margin-bottom: 20px;
+  }
+}
+.device .download {
+  font-family: "Hiragino Maru Gothic StdN", "Hiragino Maru Gothic ProN", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ ProN", "ヒラギノ丸ゴ Pro", "GenJyuuGothic", sans-serif;
+  margin-bottom: 48px;
+  font-size: 32px;
+  text-align: center;
+}
+.device .qr_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 84px;
+  margin-bottom: 40px;
+}
+.device .qr_wrap .qr_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.device .qr_wrap .qr_img:first-child {
+  width: 138px;
+}
+.device .qr_wrap .qr_img:last-child {
+  width: 214px;
+}
+.device .notice {
+  color: #0783c2;
+  font-size: 13px;
+  text-align: center;
+}
+.device .notice a {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

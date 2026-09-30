@@ -1,0 +1,67 @@
+#rex-ceb-01 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#rex-ceb-01 .Alert {
+    font-size: 14px;
+}
+
+/* #rex-ceb-01 .CampaignButton {
+  margin: 16px 18px 0;
+} */
+
+#rex-ceb-01 .CampaignButton a {
+    font-weight: 800;
+    -webkit-box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+#rex-ceb-01 .CampaignButton a > span {
+    font-size: 4.8vw !important;
+}
+
+#rex-ceb-01 .CampaignButton a:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+}
+
+.CampaignEntryButton_campaignButton__n6hK5 .CampaignEntryButton_rexButton__VH0Gh {
+    min-width: auto !important;
+}
+
+.Caution_caution__u5aXM.Caution_danger__WuHUY {
+    background: #fff !important;
+    border-color: #fff !important;
+}
+
+section.BelowBlock_below__\+mukh {
+    padding-bottom: 10px;
+}
+
+.Message_message__FuD4t {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #rex-ceb-01 .CampaignButton a {
+        width: 100% !important;
+        max-width: 700px !important;
+        -webkit-box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+        padding: 0;
+        height: 100px;
+        line-height: 100px;
+    }
+    #rex-ceb-01 .CampaignButton a > span {
+        font-size: 30px !important;
+    }
+    #rex-ceb-01 .CampaignButton a:hover {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transform: translate(3px, 3px);
+        transform: translate(3px, 3px);
+    }
+} /*# sourceMappingURL=rex_.css.map */

@@ -1,0 +1,23 @@
+h1, h2 {
+  font-size: 1rem;
+}
+
+h3, h4, .main, p, li {
+  font-size: 0.875rem;
+}
+
+main {
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.container section + section {
+  margin-top: 2rem;
+}
+
+.container > section > ol {
+  padding-left: 1rem;
+}
+/*# sourceMappingURL=term.css.map */

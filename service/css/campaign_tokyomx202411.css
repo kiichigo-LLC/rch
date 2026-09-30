@@ -1,0 +1,1087 @@
+@charset "UTF-8";
+body {
+  background-color: var(--white);
+  color: var(--gray1000);
+}
+body ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+body ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+body ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* 基本設定 */
+h2, h3, p {
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#cmo_pitari_banner {
+  background: white;
+}
+
+.bg_pattern {
+  background-image: url(../img/static/campaign/tokyomx202411/bg_pattern.png);
+  background-size: 100px;
+  background-position: top left;
+}
+
+picture {
+  display: inline-block;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.dispSP {
+  display: block !important;
+}
+
+.dispPC {
+  display: none !important;
+}
+
+img {
+  width: 100%;
+}
+
+.breadcrumb {
+  background: #fff;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.breadcrumb::-webkit-scrollbar {
+  display: none;
+}
+
+#rex-ceb-01 {
+  text-align: center;
+  margin: 0 auto;
+}
+#rex-ceb-01 .Alert {
+  font-size: 14px;
+}
+#rex-ceb-01 .CampaignButton {
+  margin-top: 16px;
+}
+#rex-ceb-01 .CampaignButton a {
+  width: 100% !important;
+  min-width: 100% !important;
+  font-weight: 800;
+  box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+}
+#rex-ceb-01 .CampaignButton a > span {
+  font-size: 4.8vw !important;
+}
+#rex-ceb-01 .CampaignButton a:hover {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+/* フローティングボタン */
+.nav_page {
+  position: fixed;
+  right: -26.6vw;
+  bottom: 5.33vw;
+  width: 26.6vw;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+.nav_page.active {
+  right: -3.73vw;
+}
+.nav_page ul {
+  padding: 0;
+  margin: 0;
+}
+.nav_page ul a {
+  display: block;
+  text-align: center;
+  font-size: 2.66vw;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 2.133vw;
+}
+.nav_page ul a li {
+  width: 23.2vw;
+  height: 11.73vw;
+  border: 0.53vw solid #000;
+  padding: 2vw 2.93vw 1.86vw 3.2vw;
+}
+.nav_page ul a li.entry {
+  background-color: #EB9139;
+}
+.nav_page ul a li.app-dl {
+  background-color: #F8BF00;
+}
+.nav_page ul:last-child {
+  margin-bottom: 0;
+}
+
+/* mainHeaderSec */
+.mainHeaderSec {
+  padding: 5.33% 3.2% 3.2%;
+}
+.mainHeaderSec h1 {
+  margin: 0;
+  text-align: center;
+}
+.mainHeaderSec h1 img {
+  width: 100%;
+}
+.mainHeaderSec .copyright-Txt {
+  text-align: right;
+  font-size: 2.133vw;
+  margin-top: 1.06vw;
+}
+
+/* pageNavigation */
+nav.pageNavigation {
+  margin: 0;
+  width: 100%;
+  height: 37.33%;
+  background-color: #fff;
+  padding: 3.2vw;
+}
+nav.pageNavigation ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+nav.pageNavigation ul a {
+  position: relative;
+  display: block;
+  width: 45.3vw;
+  height: 13.87vw;
+  color: #000;
+  font-weight: bold;
+}
+nav.pageNavigation ul a li {
+  padding: 2.13vw 2.66vw 2.13vw 1.6vw;
+  text-align: center;
+  background-color: #EB9139;
+  border: 0.533vw solid #000;
+  font-size: 3.2vw;
+}
+nav.pageNavigation ul a li.nav01, nav.pageNavigation ul a li.nav04 {
+  background-color: #EB9139;
+}
+nav.pageNavigation ul a li.nav02, nav.pageNavigation ul a li.nav03 {
+  background-color: #F8BF00;
+}
+nav.pageNavigation ul a span.arrow {
+  position: absolute;
+  width: 3.2vw;
+  top: 50%;
+  right: 0.66vw;
+  transform: translateX(-50%) translateY(-50%);
+}
+nav.pageNavigation ul a:nth-child(1), nav.pageNavigation ul a:nth-child(2) {
+  margin-bottom: 2.93vw;
+}
+
+/* wrapper_contents */
+.wrapper_contents {
+  padding: 5.33vw 3.2vw;
+}
+
+.border-frame {
+  border-left: 1.066vw solid #000;
+  border-right: 1.066vw solid #000;
+  border-bottom: 1.066vw solid #000;
+}
+
+h2 {
+  background-color: #000;
+  height: 11.2vw;
+  font-size: 4.26vw;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contents {
+  margin: 7vw auto 0;
+  background: #fff;
+}
+.contents h2.ttl picture img {
+  margin-top: -7px;
+}
+
+.contents-box {
+  background-image: url(../img/static/campaign/tokyomx202411/h2-borderbottom.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  padding: 8.53vw 2.133vw 7.46vw;
+}
+
+.contents_inner {
+  margin: 0 4.6vw 0;
+  background: #f4f4f4;
+  border-radius: 2.667vw;
+  padding: 4.26vw 2.667vw 7vw;
+}
+
+.btn_cta_container01 {
+  position: relative;
+}
+.btn_cta_container01 a {
+  margin: 0 auto;
+  width: 80vw;
+  height: 14vw;
+  background-color: #BD1319;
+  border-radius: 24.53vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.8vw;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 1.06vw 2.133vw 2.133vw 0px rgba(0, 0, 0, 0.2);
+}
+.btn_cta_container01 a span {
+  padding-left: 8.53vw;
+}
+.btn_cta_container01 img {
+  position: absolute;
+  width: 4.133vw;
+  top: 50%;
+  right: 3.2vw;
+  transform: translateX(-50%) translateY(-50%);
+}
+.btn_cta_container01 img.link {
+  width: 2.133vw;
+}
+.btn_cta_container01 img.point {
+  right: 7.2vw;
+}
+.btn_cta_container01 img.coin {
+  width: 7.46vw;
+  top: 50%;
+  right: 53.2vw;
+}
+.btn_cta_container01 img.link2 {
+  width: 2.133vw;
+  right: 7.2vw;
+}
+
+#slider-Area {
+  background-color: #fff;
+  padding-bottom: 0.2rem;
+  margin: 0 auto;
+  border-left: 1.066vw solid #000;
+  border-right: 1.066vw solid #000;
+  border-bottom: 1.066vw solid #000;
+}
+#slider-Area .contents-box {
+  padding: 7.46vw 0 11vw;
+}
+#slider-Area .contents-box .slider-Area-txt-b {
+  width: 85.33vw;
+  font-weight: bold;
+  margin: 0 auto 5.33vw;
+  text-align: center;
+  font-size: 3.73vw;
+}
+#slider-Area .swiper-container {
+  margin: 0 auto;
+  position: relative;
+  width: 87.46vw;
+}
+#slider-Area a {
+  text-decoration: none;
+  color: #181818;
+}
+#slider-Area .swiper-slide {
+  background-color: #F4F4F4;
+  border-radius: 1.6vw;
+  padding: 5.33vw 0;
+  margin: 0 auto 1.6vw;
+}
+#slider-Area .swiper-slide div {
+  text-align: center;
+}
+#slider-Area .swiper-slide div img {
+  width: 80vw;
+}
+#slider-Area .swiper-slide div .slider-Area-txt {
+  font-size: 3.2vw;
+  margin: 4.26vw auto 0;
+  text-align: center;
+}
+#slider-Area .swiper-slide div .pagelink-btn {
+  width: 80vw;
+  height: 14vw;
+  background-image: url(../img/static/campaign/tokyomx202411/slider-button-sp.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5.33vw;
+  color: #fff;
+  font-weight: bold;
+  margin: 4.26vw auto 5.33vw;
+}
+#slider-Area .swiper-pagination {
+  bottom: -8vw !important;
+}
+#slider-Area .swiper-pagination-bullet {
+  /*ドットの色を変更*/
+  background-color: #000;
+  margin: 0px 2.66vw;
+  width: 2.133vw;
+  height: 2.133vw;
+}
+#slider-Area .swiper-pagination-bullet-active {
+  background-color: #F85918;
+}
+
+#cpn_01 .contents-box {
+  padding: 8.53vw 3.2vw 6.4vw;
+}
+
+#cpn_02 .contents_inner {
+  margin: 0 0 5.33vw;
+  padding: 7.46vw 2.667vw;
+  border-radius: 5.33vw;
+  background: #f4f4f4;
+}
+#cpn_02 .step {
+  width: 26.6vw;
+  height: 7.46vw;
+  margin-bottom: 3.2vw;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cpn_02 .step p {
+  margin-right: 0.26vw;
+  padding-top: 0.8vw;
+  font-size: 4.26vw;
+  color: #fff;
+  font-weight: bold;
+}
+#cpn_02 .step span {
+  display: block;
+  width: 4.26vw;
+  height: 4.26vw;
+  padding-top: 0.26vw;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  font-size: 3.73vw;
+  font-weight: bold;
+  text-align: center;
+  line-height: 4.26vw;
+}
+#cpn_02 h3 {
+  font-size: 4.26vw;
+  font-weight: bold;
+  text-align: center;
+}
+#cpn_02 h3 span {
+  color: #BD1319;
+}
+#cpn_02 .Message_message__FuD4t {
+  display: none;
+}
+#cpn_02 .CampaignEntryButton_campaignButton__n6hK5 {
+  width: 88%;
+  margin: 32px auto;
+}
+#cpn_02 .main_container {
+  margin: 5.86vw 0;
+  text-align: center;
+}
+#cpn_02 .notes_container {
+  margin-top: 6.4vw;
+  text-align: left;
+}
+#cpn_02 .notes_container ul {
+  padding: 0;
+  margin: 0;
+}
+#cpn_02 .notes_container ul li {
+  font-size: 3.2vw;
+  text-align: justify;
+}
+
+.main_container.dispSP {
+  margin: 7.46vw auto;
+}
+.main_container.dispSP img {
+  width: 26.6vw;
+}
+
+#cpn_02_03 .main_container .step3 {
+  width: 45.86vw;
+}
+
+#cpn_02_03 .main_container, #cpn_02_04 .main_container {
+  margin: 5.33vw 0 7.46vw;
+}
+
+#cpn_02_04 .main_container {
+  text-align: right;
+}
+#cpn_02_04 .main_container .step4 {
+  width: 62.13vw;
+  margin: 0 auto;
+}
+#cpn_02_04 p.cond-txt {
+  margin: 5.33vw auto;
+  text-align: center;
+  font-size: 4.26vw;
+  font-weight: bold;
+}
+#cpn_02_04 p.cond-txt span {
+  color: #BD1319;
+}
+
+#cpn_02 .step4-txt .step {
+  width: 21.33vw;
+  margin-bottom: 0;
+}
+
+.step4-txt {
+  display: flex;
+  justify-content: center;
+}
+.step4-txt span.from {
+  margin: 0 1.6vw;
+  font-size: 4.26vw;
+  font-weight: bold;
+}
+.step4-txt span.conditions {
+  display: block;
+  align-self: center;
+  padding-left: 1.6vw;
+  font-size: 4.26vw;
+  font-weight: bold;
+  color: #BD1319;
+}
+
+.cond-txt {
+  margin: 5.33vw 0;
+  text-align: center;
+  font-size: 4.26vw;
+  font-weight: bold;
+}
+.cond-txt span {
+  color: #BD1319;
+}
+
+#cpn_03 .contents-box h3 {
+  text-align: center;
+  font-size: 3.73vw;
+  padding-bottom: 0;
+  margin-bottom: 5.33vw;
+}
+#cpn_03 .contents-box h3 span {
+  color: #BD1319;
+}
+#cpn_03 .contents-box .contents_inner {
+  margin: 0 0 5.33vw;
+  padding: 5.33vw 3.2vw;
+}
+#cpn_03 .contents-box .contents_inner .schedule {
+  margin: 3.2vw 0;
+  padding: 3.46vw 2.133vw 2vw;
+}
+#cpn_03 .contents-box .contents_inner .schedule.orange {
+  background-color: #EB9139;
+}
+#cpn_03 .contents-box .contents_inner .schedule.yellow {
+  background-color: #F8BF00;
+}
+#cpn_03 .contents-box .contents_inner .schedule p {
+  font-size: 3.73vw;
+  font-weight: bold;
+  text-align: justify;
+}
+#cpn_03 .contents-box .contents_inner .schedule p span {
+  font-size: 3.2vw;
+}
+#cpn_03 .contents-box .contents_inner h4 {
+  margin: 0;
+  font-size: 4.26vw;
+}
+#cpn_03 .contents-box .contents_inner p.schedule-txt {
+  margin-top: 0.4rem;
+  font-size: 3.73vw;
+  text-align: justify;
+}
+#cpn_03 .contents-box .contents_inner p.schedule-txt span {
+  font-size: 3.2vw;
+}
+
+#cpn_04 .btn_cta_container01 {
+  margin: 6.4vw auto 5.33vw;
+}
+#cpn_04 p {
+  margin: 0 2vw;
+  font-size: 3.2vw;
+}
+
+#cpn_05 .contents-box {
+  padding-bottom: 0;
+}
+#cpn_05 h2 {
+  font-size: 4vw;
+}
+#cpn_05 .btn_cta_container01 {
+  margin: 6.4vw 0;
+}
+#cpn_05 .btn_cta_container01 a {
+  font-size: 4vw;
+}
+
+/* キャンペーンルール */
+.contents_campaign_overview .contents-box {
+  padding-bottom: 5.33vw;
+}
+.contents_campaign_overview .campaign_inner {
+  padding: 0;
+}
+.contents_campaign_overview h3 {
+  margin: 0 0 3.2vw;
+  text-align: center;
+  font-size: 3.2vw;
+}
+.contents_campaign_overview h3:last-child {
+  margin: 3.2vw 0 3.2vw;
+}
+.contents_campaign_overview h3.x-follow {
+  margin: 3.2vw 0;
+}
+.contents_campaign_overview dl {
+  margin: 0;
+  font-size: 3.2vw;
+}
+.contents_campaign_overview dl + h3 {
+  margin-top: 80px;
+}
+.contents_campaign_overview dl dt,
+.contents_campaign_overview dl dd {
+  color: #2D3539;
+  text-align: left;
+  margin: 0;
+}
+.contents_campaign_overview dl dt {
+  padding: 2.133vw 4.26vw;
+  background: #f7f8f9;
+  font-weight: bold;
+}
+.contents_campaign_overview dl dd {
+  padding: 4.26vw;
+}
+.contents_campaign_overview dl dd dt,
+.contents_campaign_overview dl dd dd {
+  color: #2d3539;
+  text-align: left;
+}
+.contents_campaign_overview dl dd dt {
+  background: #f1f1f1;
+  font-weight: bold;
+}
+.contents_campaign_overview dl dd:last-child {
+  margin-bottom: 0;
+}
+.contents_campaign_overview dl:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .dispSP {
+    display: none !important;
+  }
+  .dispPC {
+    display: block !important;
+  }
+  img {
+    max-width: 100%;
+    width: auto;
+  }
+  .bg_pattern {
+    background-image: url(../img/static/campaign/tokyomx202411/bg_pattern.png);
+    background-size: 195px;
+    background-position: top left;
+  }
+  picture {
+    display: inline-block;
+  }
+  .responsive-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  body {
+    min-width: 1040px;
+  }
+  #rex-ceb-01 .CampaignButton {
+    margin-top: 32px;
+  }
+  #rex-ceb-01 .CampaignButton a {
+    box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+  #rex-ceb-01 .CampaignButton a > span {
+    font-size: 28px !important;
+  }
+  #rex-ceb-01 .CampaignButton a:hover {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+  }
+  /* フローティングボタン */
+  .nav_page {
+    position: fixed;
+    right: -228px;
+    bottom: 60px;
+    width: 228px;
+    z-index: 100;
+    transition: all 0.5s ease;
+  }
+  .nav_page.active {
+    right: 0px;
+  }
+  .nav_page ul {
+    opacity: 0.9;
+  }
+  .nav_page ul:hover {
+    opacity: 1;
+  }
+  .nav_page ul a {
+    position: relative;
+    right: -10px;
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  .nav_page ul a:hover {
+    right: 0;
+  }
+  .nav_page ul a li {
+    width: 228px;
+    height: 124px;
+    border: 4px solid #000;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* mainHeaderSec */
+  .mainHeaderSec {
+    width: 1040px;
+    margin: 0 auto;
+    padding: 80px 0 52px;
+  }
+  .mainHeaderSec .copyright-Txt {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 0.63rem;
+  }
+  /* pageNavigation */
+  nav.pageNavigation {
+    margin: 0;
+    width: 100%;
+    min-width: 1040px;
+    height: 200px;
+    padding: 50px 0;
+  }
+  nav.pageNavigation ul {
+    width: 1024px;
+    display: flex;
+    margin: 0 auto;
+  }
+  nav.pageNavigation ul a {
+    width: 252px;
+    height: 112px;
+  }
+  nav.pageNavigation ul a:hover {
+    transform: scale(1.03);
+  }
+  nav.pageNavigation ul a li {
+    width: 252px;
+    height: 112px;
+    padding: 10px 14px 10px 10px;
+    border: 4px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  nav.pageNavigation ul a li.nav01, nav.pageNavigation ul a li.nav03 {
+    background-color: #EB9139;
+  }
+  nav.pageNavigation ul a li.nav02, nav.pageNavigation ul a li.nav04 {
+    background-color: #F8BF00;
+  }
+  nav.pageNavigation ul a span.arrow {
+    width: 9.26px;
+    right: 14px;
+  }
+  nav.pageNavigation ul a:nth-child(1), nav.pageNavigation ul a:nth-child(2) {
+    margin-bottom: 0;
+  }
+  /* wrapper_contents */
+  .wrapper_contents {
+    padding: 83px 0 80px;
+  }
+  .border-frame {
+    border-left: 8px solid #000;
+    border-right: 8px solid #000;
+    border-bottom: 8px solid #000;
+  }
+  h2 {
+    height: 80px;
+    font-size: 1.75rem;
+  }
+  .contents {
+    margin: 64px auto 0;
+  }
+  .contents h2.ttl picture img {
+    margin-top: -7px;
+  }
+  .contents-box {
+    background-image: url(../img/static/campaign/tokyomx202411/h2-borderbottom-pc.png);
+    padding: 52px 60px 78px;
+  }
+  .contents_inner {
+    margin: 0 18px 0;
+    border-radius: 20px;
+    padding: 16px 10px 28px;
+  }
+  .btn_cta_container01:hover {
+    transform: translate(3px, 3px);
+  }
+  .btn_cta_container01 a {
+    width: 680px;
+    height: 100px;
+    font-size: 2rem;
+    box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+  .btn_cta_container01 a span {
+    padding-left: 1.75rem;
+  }
+  .btn_cta_container01 a:hover {
+    box-shadow: none;
+  }
+  .btn_cta_container01 img {
+    width: 40px;
+    top: 50%;
+    right: 20px;
+  }
+  .btn_cta_container01 img.link {
+    width: 20px;
+  }
+  .btn_cta_container01 img.point {
+    right: 114px;
+  }
+  .btn_cta_container01 img.coin {
+    width: 48px;
+    right: 544px;
+  }
+  .btn_cta_container01 img.link2 {
+    width: 20px;
+    right: 126px;
+  }
+  #slider-Area {
+    width: 100%;
+    max-width: 1040px;
+    padding-bottom: 0.2rem;
+    margin: 0 auto;
+    border-left: 8px solid #000;
+    border-right: 8px solid #000;
+    border-bottom: 8px solid #000;
+  }
+  #slider-Area .contents-box {
+    padding: 64px 0 112px;
+  }
+  #slider-Area .contents-box .slider-Area-txt-b {
+    width: 800px;
+    margin: 0 auto 52px;
+    font-size: 1.25rem;
+  }
+  #slider-Area .swiper-container {
+    width: 572px;
+  }
+  #slider-Area .swiper-slide {
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    padding: 44px 0 40px;
+    margin: 0 auto 6px;
+  }
+  #slider-Area .swiper-slide a:hover {
+    opacity: 0.6;
+  }
+  #slider-Area .swiper-slide div img {
+    margin: 0 26px;
+    width: 520px;
+  }
+  #slider-Area .swiper-slide div .slider-Area-txt {
+    font-size: 1.12rem;
+    margin: 24px auto 0;
+  }
+  #slider-Area .swiper-slide div .pagelink-btn {
+    width: 500px;
+    height: 80px;
+    background-image: url(../img/static/campaign/tokyomx202411/slider-button-pc.png);
+    font-size: 2rem;
+    margin: 32px auto 0;
+  }
+  #slider-Area .swiper-pagination {
+    bottom: -72px !important;
+  }
+  #slider-Area .swiper-pagination-bullet {
+    margin: 0px 18px;
+    width: 16px;
+    height: 16px;
+  }
+  #cpn_01 {
+    width: 100%;
+    max-width: 1040px;
+    margin-top: 60px;
+    border: #000 solid 8px;
+    text-align: center;
+  }
+  #cpn_01 .contents-box {
+    padding: 84px 0 80px;
+  }
+  #cpn_01 .contents-box img {
+    margin: 0 auto;
+    width: 880px;
+  }
+  #cpn_02 {
+    width: 100%;
+    max-width: 1040px;
+    margin-top: 83px;
+  }
+  #cpn_02 .contents-box {
+    padding: 76px 60px 80px;
+  }
+  #cpn_02 .contents-box .contents_inner {
+    margin: 0 0 80px;
+    padding: 64px 72px;
+    border-radius: 20px;
+  }
+  #cpn_02 .contents-box .step-wrap {
+    display: flex;
+  }
+  #cpn_02 .contents-box .step {
+    width: 156px;
+    height: 44px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+  #cpn_02 .contents-box .step p {
+    margin-right: 0;
+    padding-top: 3px;
+    font-size: 1.75rem;
+  }
+  #cpn_02 .contents-box .step span {
+    display: block;
+    width: 28px;
+    height: 28px;
+    padding-top: 1px;
+    border-radius: 50%;
+    font-size: 1.75rem;
+    line-height: 28px;
+  }
+  #cpn_02 .contents-box h3 {
+    font-size: 1.75rem;
+  }
+  #cpn_02 .CampaignEntryButton_campaignButton__n6hK5 {
+    width: 88%;
+    max-width: 528px;
+    margin: 56px auto;
+  }
+  #cpn_02 .Caution_caution__u5aXM {
+    margin-top: 56px;
+  }
+  #cpn_02 .main_container {
+    margin: 24px 0;
+  }
+  #cpn_02 .notes_container {
+    margin-top: 56px;
+    text-align: left;
+  }
+  #cpn_02 .notes_container ul li {
+    font-size: 1rem;
+  }
+  #cpn_02_02 .main_container {
+    margin: 40px 0 0;
+  }
+  #cpn_02_02 .main_container img {
+    width: 248px;
+    margin: 0 auto;
+  }
+  #cpn_02_03 .main_container .step3 {
+    width: 299px;
+  }
+  #cpn_02_03 .main_container, #cpn_02_04 .main_container {
+    margin: 64px 0;
+  }
+  #cpn_02_04 .main_container {
+    text-align: center;
+  }
+  #cpn_02_04 .main_container .step4 {
+    width: 550px;
+  }
+  #cpn_02_04 .main_container .step4 img {
+    width: 100%;
+  }
+  #cpn_02_04 p.cond-txt {
+    margin: 40px auto 0;
+    font-size: 2rem;
+  }
+  #cpn_02 .step4-txt .step {
+    width: 156px;
+    margin-right: 0;
+  }
+  .step4-txt span.from {
+    margin: 0 17px;
+    font-size: 2rem;
+  }
+  .step4-txt span.conditions {
+    padding-left: 17px;
+    font-size: 2rem;
+  }
+  .cond-txt {
+    margin: 40px 0 64px;
+    font-size: 2rem;
+  }
+  #cpn_03 {
+    width: 100%;
+    max-width: 1040px;
+    margin-top: 83px;
+  }
+  #cpn_03 .contents-box {
+    padding: 64px 60px 72px;
+  }
+  #cpn_03 .contents-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 52px;
+  }
+  #cpn_03 .contents-box .contents_inner {
+    margin: 0 0 64px;
+    padding: 44px 60px;
+  }
+  #cpn_03 .contents-box .contents_inner .schedule {
+    margin: 20px 0;
+    padding: 12px;
+  }
+  #cpn_03 .contents-box .contents_inner .schedule p {
+    font-size: 1.25rem;
+  }
+  #cpn_03 .contents-box .contents_inner .schedule p span {
+    font-size: 1.25rem;
+    padding-left: 0.5rem;
+  }
+  #cpn_03 .contents-box .contents_inner h4 {
+    font-size: 1.5rem;
+  }
+  #cpn_03 .contents-box .contents_inner p.schedule-txt {
+    margin-top: 0.4rem;
+    font-size: 1.12rem;
+  }
+  #cpn_03 .contents-box .contents_inner p.schedule-txt span {
+    font-size: 0.8rem;
+  }
+  #cpn_03 .contents-box:last-child {
+    margin-bottom: 0;
+  }
+  #cpn_04 {
+    width: 100%;
+    max-width: 1040px;
+    margin-top: 83px;
+  }
+  #cpn_04 .contents-box {
+    background-image: url(../img/static/campaign/tokyomx202411/h2-borderbottom-pc.png);
+    padding: 76px 60px 64px;
+  }
+  #cpn_04 .btn_cta_container01 {
+    margin: 64px auto 32px;
+  }
+  #cpn_04 p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+  #cpn_05 {
+    width: 100%;
+    max-width: 1040px;
+    margin-top: 83px;
+  }
+  #cpn_05 .contents-box {
+    padding: 76px 60px 72px;
+  }
+  #cpn_05 h2 {
+    font-size: 1.75rem;
+  }
+  #cpn_05 .btn_cta_container01 {
+    margin: 64px 0 0;
+  }
+  #cpn_05 .btn_cta_container01 a {
+    font-size: 2rem;
+  }
+  /* キャンペーンルール */
+  .contents_campaign_overview {
+    width: 100%;
+    max-width: 1040px;
+    margin-top: 83px;
+  }
+  .contents_campaign_overview .contents-box {
+    padding: 76px 39px 78px;
+  }
+  .contents_campaign_overview h3 {
+    margin: 0 0 32px;
+    font-size: 1.12rem;
+  }
+  .contents_campaign_overview dl {
+    font-size: 0.88rem;
+    display: flex;
+  }
+  .contents_campaign_overview dl.bg-gray {
+    background-color: #f7f8f9;
+  }
+  .contents_campaign_overview dl dt {
+    width: 220px;
+    padding: 24px;
+  }
+  .contents_campaign_overview dl dt.bg-white {
+    background-color: #fff;
+  }
+  .contents_campaign_overview dl dd {
+    width: calc(100% - 220px);
+    padding: 24px;
+  }
+}/*# sourceMappingURL=campaign_tokyomx202411.css.map */

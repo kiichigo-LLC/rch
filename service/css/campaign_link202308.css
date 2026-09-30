@@ -1,0 +1,416 @@
+body {
+  background-color: var(--white);
+  color: var(--gray1000);
+}
+body ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+body ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+body ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+.dispPC {
+  display: none;
+}
+
+.dispSP {
+  display: block;
+}
+
+.fontWeightNormal {
+  font-weight: 400;
+}
+
+.fontWeightBold {
+  font-weight: 800;
+}
+
+.fontSmall {
+  font-size: 80%;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textInfo {
+  color: #4dc4ff;
+}
+
+.textWarn {
+  color: #f00;
+}
+
+.textRLink {
+  color: #ff008c;
+}
+
+.txtUnderline {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.contents {
+  padding: 0 8px;
+}
+.contents:last-of-type {
+  padding: 0;
+}
+
+.mainHeaderSec h1 {
+  margin: 0 0 16px;
+  text-align: center;
+  background-color: #c0171d;
+}
+.mainHeaderSec h1 img {
+  display: block;
+  width: 100%;
+}
+
+.img_box {
+  padding: 0 8px;
+  margin-bottom: 16px;
+}
+.img_box img {
+  width: 100%;
+}
+
+.campaign_info {
+  padding: 0 8px;
+  font-size: 12px;
+  line-height: 160%;
+}
+
+.app_dl {
+  border: 1px solid #C5C8CE;
+  padding: 0;
+  margin: 0 8px 16px;
+}
+.app_dl h2 {
+  margin: 0 0 16px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 120%;
+  padding: 8px 0;
+  background: var(--colorBrand);
+  color: #fff;
+}
+.app_dl .rch_logo {
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.app_link {
+  display: flex;
+  justify-content: center;
+  padding: 0 0;
+  margin: 8px 16px 16px;
+}
+.app_link.app_link_col {
+  flex-flow: column;
+  margin: 16px 0 0;
+}
+.app_link.app_link_col div {
+  text-align: center;
+}
+.app_link.app_link_col div:first-of-type {
+  margin-bottom: 8px;
+}
+.app_link.app_link_col div a {
+  display: inline-block;
+  margin: 0 auto;
+}
+.app_link p {
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.bg_gray {
+  background: #f7f7f7;
+}
+
+.contents_inner {
+  padding: 8px 12px;
+}
+.contents_inner:last-of-type {
+  padding: 8px 0;
+}
+.contents_inner h2.link_head {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 16px;
+  color: #2d3539;
+}
+
+.link_btn {
+  display: block;
+  border: 1px solid #bf0000;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 36px;
+  font-weight: bold;
+  color: #fff;
+  background: #bf0000;
+  font-size: 14px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.link_btn:hover {
+  color: #fff;
+}
+.link_btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/static/campaign/link202305/chevron-rch.svg) no-repeat left top;
+  background-size: 20px auto;
+  transform: translate(0, -50%);
+}
+.link_btn.btn_RLink {
+  border-color: #ff008c;
+  background: #fff;
+  color: #ff008c;
+  padding-left: 52px;
+  padding-right: 52px;
+}
+.link_btn.btn_RLink img {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.link_btn.btn_RLink::after {
+  background: url(../img/static/campaign/link202305/chevron-rmobile.svg) no-repeat left top;
+  background-size: 20px auto;
+}
+
+.campaign_link {
+  margin: 16px 0;
+  padding: 0;
+}
+.campaign_link li {
+  display: block;
+  margin: 4px 16px;
+}
+.campaign_link li img {
+  width: 100%;
+}
+
+.campaign_flow {
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #dadce1;
+}
+.campaign_flow h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.campaign_flow > img {
+  width: 100%;
+  height: auto;
+}
+.campaign_flow > p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+.campaign_flow > p.small {
+  font-size: 10px;
+}
+.campaign_flow > p:last-child {
+  margin-bottom: 0;
+}
+
+.flow_divider {
+  width: 104px;
+  margin: 24px auto;
+}
+.flow_divider img {
+  width: 104px;
+  height: 20px;
+}
+
+.campaign_rule dt, .campaign_rule dd {
+  padding: 16px;
+  font-size: 14px;
+  color: #2d3539;
+}
+.campaign_rule dt {
+  background: #f7f8f9;
+  font-weight: bold;
+}
+.campaign_rule dd {
+  margin: 0;
+}
+
+.footer_fix_btn {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  padding: 16px;
+  text-align: center;
+}
+
+.storeBtn {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--white);
+  background: var(--colorBrand);
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 0px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+.storeBtn:hover {
+  color: var(--white) !important;
+}
+.storeBtn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/static/campaign/link202305/chevron-rch.svg) no-repeat left top;
+  background-size: 20px auto;
+  transform: translate(0, -50%);
+}
+
+.entryInfoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0 4px;
+}
+
+.iconInfo {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+}
+
+.rLinkBox {
+  border: 2px solid #ff008c;
+  border-radius: 16px;
+  margin: 24px 0;
+  background: #fff;
+}
+
+.btnRLink {
+  background: #ff008c;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin: 16px 10%;
+  padding: 8px;
+  border-radius: 18px;
+  line-height: 20px;
+  position: relative;
+}
+.btnRLink:hover {
+  color: var(--white) !important;
+}
+.btnRLink::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/static/campaign/link202305/chevron-rch.svg) no-repeat left top;
+  background-size: 20px auto;
+  transform: translate(0, -50%);
+}
+
+.footerBackToTop {
+  transform: rotate(-90deg);
+}
+
+.bttIcon {
+  background: var(--colorBrand);
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  padding: 8px 14px;
+  border-radius: 24px;
+  right: 24px;
+  bottom: 168px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.appIcon {
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 72px;
+  right: 16px;
+  bottom: 88px;
+  text-align: center;
+  color: var(--colorBrand);
+  font-weight: bold;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 0;
+  border-radius: 8px;
+}
+.appIcon img {
+  width: 48px;
+}
+.appIcon span {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+}
+.appIcon:hover {
+  color: var(--colorBrand) !important;
+}
+.appIcon:hover img {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  .dispPC {
+    display: block;
+  }
+  .dispSP {
+    display: none;
+  }
+  .wrapper {
+    width: 360px;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=campaign_link202308.css.map */

@@ -1,0 +1,777 @@
+@charset "UTF-8";
+body {
+	background-color: var(--white);
+	color: var(--gray1000);
+}
+body ::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+body ::-webkit-scrollbar-track {
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+body ::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* 基本設定 */
+h2,
+h3,
+p {
+	margin: 0;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	color: #28292a;
+}
+
+#cmo_pitari_banner {
+	background: white;
+}
+
+picture {
+	display: inline-block;
+}
+
+.responsive-image {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+.dispSP {
+	display: block !important;
+}
+
+.dispPC {
+	display: none !important;
+}
+
+img {
+	width: 100%;
+}
+
+.breadcrumb {
+	background: #fff;
+	overflow: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.breadcrumb::-webkit-scrollbar {
+	display: none;
+}
+
+/* mainHeaderSec */
+.mainHeaderSec {
+	margin: 0 auto 6.93vw;
+	background: #060409;
+	padding: 0 0 10.93vw;
+}
+.mainHeaderSec .heading {
+	background: #bf0000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3.46vw 0 3.2vw;
+}
+.mainHeaderSec .heading h2 {
+	color: #fff;
+	font-size: 5.33vw;
+	line-height: 5.33vw;
+}
+.mainHeaderSec .heading img {
+	width: 9.06vw;
+	padding-left: 1.06vw;
+}
+.mainHeaderSec h1 {
+	margin: 0;
+	text-align: center;
+}
+.mainHeaderSec h1 img {
+	width: 100%;
+}
+
+.point-box {
+	max-width: 1040px;
+	margin: 1.86vw 4.26vw 0;
+	padding-top: 4.8vw;
+	background: #fff;
+	border-radius: 2.13vw;
+}
+.point-box .point-box-inner {
+	padding: 0 4.26vw;
+}
+.point-box h3 {
+	margin: 0 auto 4.8vw;
+}
+.point-box a.point-detail {
+	display: block;
+}
+.point-box a.point-detail img {
+	border-radius: 0 0 2.13vw 2.13vw;
+}
+
+.card-wrap {
+	border-radius: 2.13vw;
+}
+.card-wrap .card-ttl-wrap {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-left: 4.26vw;
+	margin-bottom: 3.2vw;
+}
+.card-wrap .card-ttl-wrap h4 {
+	margin: 0 0 0 2.4vw;
+	color: #bf0000;
+	font-weight: bold;
+	font-size: 4.8vw;
+}
+.card-wrap .card .num {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #bf0000;
+	width: 10.93vw;
+	height: 10.93vw;
+	font-size: 5.33vw;
+	line-height: 5.33vw;
+	color: #fff;
+}
+.card-wrap .card img {
+	margin-bottom: 3.46vw;
+}
+.card-wrap .card .card-box-inner {
+	padding: 0 4.26vw;
+}
+.card-wrap .card p {
+	font-size: 3.73vw;
+	margin-bottom: 7.46vw;
+	text-align: justify;
+}
+
+.supp-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3.73vw;
+}
+.supp-box img {
+	width: 8.53vw;
+}
+.supp-box h4 {
+	margin: 0 0 0 2.13vw;
+	font-size: 4.8vw;
+	font-weight: bold;
+}
+
+.double-cp {
+	max-width: 1040px;
+	margin-bottom: 12.26vw;
+	padding: 0 4.26vw;
+}
+.double-cp .double-cp-box .heading {
+	border-radius: 2.13vw 2.13vw 0 0;
+	background: #bf0000;
+	padding: 2.66vw 0;
+}
+.double-cp .double-cp-box .heading h2 {
+	font-size: 5.33vw;
+	color: #fff;
+	text-align: center;
+}
+.double-cp .double-cp-box .contents {
+	margin-bottom: 5.86vw;
+	border-radius: 0 0 2.13vw 2.13vw;
+	border: 0.53vw solid #bf0000;
+}
+.double-cp .double-cp-box .contents picture {
+	margin: 4.26vw 4.26vw 2.66vw;
+}
+.double-cp .double-cp-box p {
+	margin: 0 4.26vw 3.2vw;
+	font-size: 3.46vw;
+}
+.double-cp .double-cp-box .link-btn {
+	position: relative;
+	margin-bottom: 6.66vw;
+}
+.double-cp .double-cp-box .link-btn .comingsoon {
+	margin: 0 auto;
+	width: 81.26%;
+	max-width: 680px;
+	height: 14vw;
+	background-color: #c4c4c4;
+	border-radius: 24.53vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4.8vw;
+	color: #fff;
+	font-weight: bold;
+}
+.double-cp .double-cp-box .link-btn a {
+	position: relative;
+	margin: 0 auto;
+	width: 81.26%;
+	max-width: 680px;
+	height: 14vw;
+	/* background-color: #c4c4c4; */
+	background-color: #bf0000;
+	border-radius: 24.53vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4.8vw;
+	color: #fff;
+	font-weight: bold;
+	box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.double-cp .double-cp-box .link-btn a::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 6%;
+	width: 8px;
+	height: 13px;
+	background: url(../img/tvapp/link-arrow-white.png) no-repeat center / contain;
+	transform: translateY(-50%);
+}
+
+/* .double-cp .double-cp-box .link-btn img {
+	position: absolute;
+	width: 2.13vw;
+	top: 50%;
+	right: 12%;
+	transform: translateX(-50%) translateY(-50%);
+} */
+
+.use {
+	background: #ffebeb;
+}
+.use h2 {
+	text-align: center;
+	font-size: 6.93vw;
+	padding: 9.06vw 0 6.66vw;
+}
+
+.use .use-box {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 4.26vw 9.06vw;
+}
+.use .use-box .accordion-box {
+	width: 100%;
+	margin-bottom: 4.26vw;
+	border-radius: 2.13vw;
+	background-color: #fff;
+}
+.use .use-box .accordion-box .accordion {
+	cursor: pointer;
+	padding: 4.26vw;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transform: 0.4s;
+	font-size: 4.8vw;
+}
+.use .use-box .accordion-box .panel {
+	padding: 0 4.26vw;
+	display: none;
+	overflow: hidden;
+}
+.use .use-box .accordion-box .panel .panel-box img {
+	margin-bottom: 2.4vw;
+}
+.use .use-box .accordion-box .panel .panel-box p {
+	margin-bottom: 3.46vw;
+	font-size: 3.73vw;
+}
+.use .use-box .accordion-box .panel .panel-box p.small {
+	margin-bottom: 1.86vw;
+	text-align: right;
+	font-size: 2.13vw;
+}
+.use .use-box .accordion-box .icon {
+	width: 20px;
+	height: 20px;
+	transition: transform 0.4s;
+}
+
+/* 推奨機器 */
+.device {
+	background: #ebebeb;
+	color: #28292a;
+}
+.device .device-innner {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 6.66vw 4.26vw 8.53vw;
+}
+.device h2 {
+	font-size: 6.93vw;
+	text-align: center;
+}
+.device .ttl-bg {
+	background: #fff;
+	border-radius: 4.26vw;
+	text-align: center;
+	margin: 6.66vw 0 2.93vw;
+}
+.device .ttl-bg h3 {
+	padding-top: 0.8vw;
+	font-size: 5.33vw;
+}
+.device p {
+	font-size: 3.73vw;
+}
+
+/* Rチャンネル */
+.overview {
+	background: #1e1e1e;
+	text-align: center;
+}
+.overview .overview-inner {
+	max-width: 960px;
+	margin: 0 auto;
+}
+.overview .top-link {
+	background: #fff;
+	padding: 8vw 0 2.66vw;
+}
+.overview .top-link a {
+	display: block;
+	text-align: center;
+	text-decoration: underline !important;
+	font-size: 3.73vw;
+	color: #0783c2;
+}
+.overview .top-link p.trademark {
+	max-width: 960px;
+	text-align: left;
+	font-size: 3.2vw;
+	margin: 0 auto;
+	padding: 10.13vw 4.26vw 0;
+}
+
+@media screen and (min-width: 768px) {
+	.dispSP {
+		display: none !important;
+	}
+	.dispPC {
+		display: block !important;
+	}
+	/* mainHeaderSec */
+	.mainHeaderSec .heading {
+		padding: 13.35px 0 14.65px;
+	}
+	.mainHeaderSec .heading h2 {
+		font-size: 2.69vw;
+		line-height: 2.69vw;
+	}
+	.mainHeaderSec .heading img {
+		width: 41px;
+		padding-left: 10px;
+	}
+	.mainHeaderSec h1 img {
+		width: 100%;
+	}
+	.point-box {
+		margin: 0 40px;
+		padding-top: 3.07vw;
+		border-radius: 12px;
+	}
+	.point-box .point-box-innner {
+		padding: 0 43px;
+	}
+	.point-box h3 {
+		margin: 0 auto 50px;
+		text-align: center;
+	}
+	.point-box a.point-detail {
+		display: block;
+	}
+	.point-box a.point-detail img {
+		border-radius: 0 0 12px 12px;
+	}
+	.card-wrap {
+		border-radius: 12px;
+	}
+	.card-wrap .card-ttl-wrap {
+		margin-left: 43px;
+		margin-bottom: 18px;
+	}
+	.card-wrap .card-ttl-wrap h4 {
+		margin: 0 0 0 2.4vw;
+		color: #bf0000;
+		font-weight: bold;
+		font-size: 1.6rem;
+	}
+	.card-wrap .card .num {
+		width: 50px;
+		height: 50px;
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+		color: #fff;
+	}
+	.card-wrap .card img {
+		margin-bottom: 17px;
+	}
+	.card-wrap .card .card-box-inner {
+		padding: 0 4.26vw;
+	}
+	.card-wrap .card p {
+		font-size: 1rem;
+		margin-bottom: 25px;
+		text-align: justify;
+	}
+	.supp-box {
+		margin-bottom: 3.2vw;
+	}
+	.supp-box img {
+		width: 32px;
+	}
+	.supp-box h4 {
+		margin: 0 0 0 10px;
+		font-size: 1.37rem;
+	}
+	.double-cp {
+		max-width: 1040px;
+		margin: 0 auto 52px;
+		padding: 0 40px;
+	}
+	.double-cp .double-cp-box .heading {
+		border-radius: 12px 12px 0 0;
+		padding: 24px 0 23px;
+	}
+	.double-cp .double-cp-box .heading h2 {
+		font-size: 1.75rem;
+	}
+	.double-cp .double-cp-box .contents {
+		margin-bottom: 5.86vw;
+		border-radius: 0 0 12px 12px;
+		border: 0.53vw solid #bf0000;
+	}
+	.double-cp .double-cp-box .contents picture {
+		margin: 38px 40px 9px;
+	}
+	.double-cp .double-cp-box p {
+		margin: 0 0 32px;
+		text-align: center;
+		font-size: 0.9rem;
+	}
+	.double-cp .double-cp-box .link-btn {
+		margin-bottom: 42px;
+	}
+	.double-cp .double-cp-box .link-btn .comingsoon {
+		width: 65%;
+		height: 80px;
+		border-radius: 92px;
+		font-size: 2rem;
+	}
+	.double-cp .double-cp-box .link-btn a {
+		width: 65%;
+		height: 80px;
+		border-radius: 92px;
+		font-size: 2rem;
+	}
+	.double-cp .double-cp-box .link-btn a::after {
+		width: 16px;
+		height: 26px;
+	}
+	.double-cp .double-cp-box .link-btn a:hover {
+		background-color: #ff1212;
+		box-shadow: none;
+		transform: translate(3px, 3px);
+	}
+	.double-cp .double-cp-box .link-btn img {
+		width: 16px;
+		top: 50%;
+		right: 19%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.use h2 {
+		font-size: 2.5rem;
+		padding: 57px 0 63px;
+	}
+	.use {
+		padding: 0 40px;
+	}
+	.use .use-box {
+		padding: 0 0 54px;
+	}
+	.use .use-box .accordion-box {
+		margin-bottom: 26px;
+		border: 2px solid #28292a;
+		border-radius: 8px;
+	}
+	.use .use-box .accordion-box .accordion {
+		padding: 20px 18px;
+		width: 100%;
+		transition: 0.4s;
+		font-size: 1.25rem;
+		border-radius: 8px;
+	}
+	.use .use-box .accordion-box .accordion.active {
+		border-bottom: none;
+	}
+	.use .use-box .accordion-box .panel {
+		padding: 0 4.26vw;
+	}
+	.use .use-box .accordion-box .panel .panel-box img {
+		margin-bottom: 11px;
+	}
+	.use .use-box .accordion-box .panel .panel-box p {
+		margin-bottom: 28px;
+		font-size: 1.12rem;
+	}
+	.use .use-box .accordion-box .panel .panel-box p.small {
+		margin-bottom: 1.86vw;
+		text-align: right;
+		font-size: 2.13vw;
+	}
+	.use .use-box .accordion-box .icon {
+		width: 20px;
+		height: 20px;
+		transition: transform 0.4s;
+	}
+	/* 推奨機器 */
+	.device {
+		padding: 58px 40px;
+	}
+	.device .device-innner {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.device h2 {
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	.device .ttl-bg {
+		border-radius: 4.26vw;
+		margin: 28px 0 20px;
+	}
+	.device .ttl-bg h3 {
+		padding-top: 0.8vw;
+		font-size: 1.75rem;
+	}
+	.device p {
+		font-size: 1.06rem;
+	}
+	/* Rチャンネル */
+	.overview .overview-inner {
+		padding: 0 40px;
+	}
+	.overview .overview-inner picture {
+		margin: 0;
+	}
+	.overview .top-link {
+		padding: 36px 0 71px;
+	}
+	.overview .top-link a {
+		font-size: 1rem;
+	}
+	.overview .top-link p.trademark {
+		font-size: 0.8rem;
+		padding: 33px 40px 0;
+	}
+}
+@media screen and (min-width: 1080px) {
+	/* mainHeaderSec */
+	.mainHeaderSec {
+		margin: 0 auto 43px;
+		padding: 0 0 73px;
+	}
+	.mainHeaderSec .heading h2 {
+		font-size: 1.75rem;
+		line-height: 1.75rem;
+	}
+	.mainHeaderSec .heading img {
+		width: 38.902px;
+	}
+	.mainHeaderSec h1 {
+		max-width: 1080px;
+		margin: 0 auto;
+	}
+	.mainHeaderSec h1 img {
+		width: 100%;
+	}
+	.mainHeaderSec .point-box {
+		margin: 0 auto;
+		padding-top: 44px;
+	}
+	.mainHeaderSec .point-box .point-box-innner {
+		padding: 0 86px;
+	}
+	.mainHeaderSec .point-box .card-wrap {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 40px;
+	}
+	.mainHeaderSec .point-box .card-wrap .card {
+		width: 289px;
+	}
+	.mainHeaderSec .point-box .card-wrap .card .card-ttl-wrap {
+		width: 289px;
+		margin-left: 0;
+	}
+	.mainHeaderSec .point-box .card-wrap .card .card-ttl-wrap h4 {
+		margin: 0 0 0 10.8px;
+		font-size: 1.25rem;
+	}
+	.mainHeaderSec .point-box .card-wrap .card-box-inner {
+		padding: 0;
+	}
+	.mainHeaderSec .point-box a:hover {
+		opacity: 0.7;
+	}
+	.supp-box {
+		margin: 28px 0 24px;
+	}
+	.supp-box img {
+		width: 32px;
+	}
+	.supp-box h4 {
+		margin: 0 0 0 10px;
+		font-size: 1.37rem;
+	}
+	.double-cp {
+		margin: 0 auto;
+		padding: 0;
+	}
+	.double-cp .double-cp-box .contents {
+		border: 2px solid #bf0000;
+		margin-bottom: 52px;
+	}
+	.double-cp .double-cp-box .contents picture {
+		margin: 38px 40px 9px;
+	}
+	.double-cp .double-cp-box .link-btn {
+		margin-bottom: 42px;
+	}
+	.double-cp .double-cp-box .link-btn .comingsoon {
+		width: 680px;
+		height: 80px;
+		border-radius: 92px;
+		font-size: 2rem;
+	}
+	.double-cp .double-cp-box .link-btn a {
+		width: 680px;
+		height: 80px;
+		border-radius: 92px;
+		font-size: 2rem;
+		box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.2);
+	}
+	.double-cp .double-cp-box .link-btn img {
+		width: 16px;
+		top: 50%;
+		right: 19%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.use {
+		padding: 0;
+	}
+	.use .use-box .accordion-box .accordion {
+		padding: 22px 18px;
+		width: 100%;
+		transition: 0.4s;
+		font-size: 1.25rem;
+		border-radius: 8px;
+	}
+	.use .use-box .accordion-box .accordion.active {
+		border-radius: 8px 8px 0 0;
+		border-bottom: none;
+	}
+	.use .use-box .accordion-box .panel {
+		padding: 0 58px;
+	}
+	.use .use-box .accordion-box .panel .panel-box {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 25px;
+	}
+	.use .use-box .accordion-box .panel .panel-box .panel-box-left,
+	.use .use-box .accordion-box .panel .panel-box .panel-box-right {
+		width: 380px;
+	}
+	.use .use-box .accordion-box .panel .panel-box p {
+		margin-bottom: 28px;
+		font-size: 0.94rem;
+	}
+	.use .use-box .accordion-box .panel .panel-box p.small {
+		margin-bottom: 10px;
+		font-size: 0.64rem;
+	}
+	.use .use-box .accordion-box .icon {
+		width: 20px;
+		height: 20px;
+		transition: transform 0.4s;
+	}
+	.device {
+		padding: 58px 40px;
+	}
+	.device .device-innner {
+		padding: 0;
+	}
+	.device h2 {
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	.device .ttl-bg {
+		border-radius: 26.5px;
+		margin: 28px 0 20px;
+	}
+	.device .ttl-bg h3 {
+		padding-top: 0;
+		height: 53px;
+		font-size: 1.75rem;
+		line-height: 53px;
+	}
+	.device p {
+		font-size: 1.06rem;
+	}
+	/* Rチャンネル */
+	.overview .overview-inner {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.overview .overview-inner picture {
+		margin: 0;
+	}
+	.overview .top-link {
+		padding: 36px 0 71px;
+	}
+	.overview .top-link a {
+		font-size: 1rem;
+	}
+} /*# sourceMappingURL=tvapp.css.map */
