@@ -91,7 +91,7 @@ define('FLOAT_TEXT', $float_text);
 			" />
 		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" /></noscript>
 		<!-- 見出し等でRakuten Sans JP Boldが必要な場合は以下を有効化 -->
-		<!-- <link rel="stylesheet" href="https://channel.rakuten.co.jp/service/font/Slice_RakutenSansJP/RakutenSansJP_W_Bold/woff/RakutenSansJP_W_Bold.css" /> -->
+		<link rel="stylesheet" href="https://channel.rakuten.co.jp/service/font/Slice_RakutenSansJP/RakutenSansJP_W_Bold/woff/RakutenSansJP_W_Bold.css" />
 		<!-- 明朝体（Noto Serif JP）が必要な場合は以下のfamilyを追記 -->
 		<!-- family=Noto+Serif+JP:wght@200..900& を上のGoogle Fonts URLに追加する -->
 
@@ -214,11 +214,7 @@ define('FLOAT_TEXT', $float_text);
 		<!-- /breadcrumb -->
 
 		<main>
-			<?php
-				include './_parts/main/kv.php';
-				// include './_parts/main/intro.php';
-				// セクションを追加したらここに include を追記
-			?>
+			<?php include './_parts/bundle.php'; ?>
 		</main>
 
 		<!-- #footer -->
@@ -226,7 +222,7 @@ define('FLOAT_TEXT', $float_text);
 		<!-- /#footer -->
 
 		<!-- フッターフローティングボタン -->
-		<div class="c-float__footer js-float">
+		<!-- <div class="c-float__footer js-float">
 			<div class="l-wrap">
 				<div class="c-float__button-container">
 					<div class="c-float__button c-button">
@@ -234,7 +230,7 @@ define('FLOAT_TEXT', $float_text);
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- /フッターフローティングボタン -->
 
 		<!-- #pagetop（ページ内トップへ戻るボタン） -->
@@ -246,7 +242,7 @@ define('FLOAT_TEXT', $float_text);
 		<!-- /PITARI Footer -->
 
 		<!-- PITARI対策  -->
-		<div class="l-space"></div>
+		<!-- <div class="l-space"></div> -->
 		<!-- /PITARI対策  -->
 
 		<!-- js -->

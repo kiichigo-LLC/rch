@@ -1,4 +1,8 @@
 <?php $FILE_NAME = basename(__FILE__, '.php'); ?>
-<div class="<?php echo PROJECT_DIR; ?>-<?php echo $FILE_NAME; ?>">
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="<?php echo PROJECT_DIR; ?>-<?php echo $FILE_NAME; ?>" id="<?php echo $FILE_NAME; ?>">
+	<div class="<?php echo PROJECT_DIR; ?>-<?php echo $FILE_NAME; ?>-inr">
+		<div class="<?php echo PROJECT_DIR; ?>-<?php echo $FILE_NAME; ?>-img">
+			<img src="./img/kv/mv.webp" alt="<?php echo PAGE_TITLE; ?>">
+		</div>
+	</div>
 </div>

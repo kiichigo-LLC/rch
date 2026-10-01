@@ -8,7 +8,10 @@
  */
 
 import { initFloat } from './modules/float.js';
+import { initCastTab } from './modules/castTab.js';
+import './modules/icons/index.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	initFloat();
+	initCastTab();
 });

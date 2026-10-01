@@ -11,11 +11,22 @@
 ============================================================
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow-x: clip;
+}
 
 body {
-	font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", Arial, Verdana, sans-serif;
-	color: var(--main-text);
+	font-family: $f-main;
+	color: $clr-text;
 	font-size: 0.875rem;
+	font-feature-settings: 'palt';
 
 	@media screen and (min-width: $brake_md) {
 		font-size: 1.125rem;
@@ -115,3 +126,34 @@ th {
 	}
 }
 /*** /layout ***/
+
+
+.none {
+  &tb {
+    display: none!important;
+    @media screen and (min-width: $brake_xl+1) {
+      display: block!important;
+    }
+  }
+  &sp {
+    display: none!important;
+    @media screen and (min-width: $brake_md+1) {
+      display: block!important;
+    }
+  }
+  &pc {
+    display: block!important;
+    @media screen and (min-width: $brake_sl+1) {
+      display: none!important;
+    }
+  }
+}
+
+.only {
+  &sp {
+    display: none!important;
+    @media screen and (max-width: $brake_md) {
+      display: block!important;
+    }
+  }
+}

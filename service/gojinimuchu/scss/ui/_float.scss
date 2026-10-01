@@ -1,4 +1,8 @@
-@charset "UTF-8";
+/* 変数セット
+------------------------------------------------------------ */
+@use "../common" as *;
+
+
 /*
 ============================================================
 
@@ -7,11 +11,7 @@ float（フッターフローティングボタン）
 ============================================================
 */
 
-@use "../common/forward" as *;
-
 .c-float {
-	font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", Arial, Verdana, sans-serif;
-
 	&__footer {
 		display: none;
 		position: fixed;
