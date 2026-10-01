@@ -15,7 +15,7 @@
 		<?php foreach ($tweets as $tweet_url) : ?>
 			<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-slide-item">
 				<blockquote class="twitter-tweet" data-dnt="true">
-					<a href="<?php echo htmlspecialchars($tweet_url, ENT_QUOTES, 'UTF-8'); ?>"></a>
+					<a href="<?php echo $tweet_url; ?>"></a>
 				</blockquote>
 			</div>
 		<?php endforeach; ?>

@@ -14,11 +14,11 @@
 		<meta property="og:title" content="{{ページタイトル}} | Rチャンネル" />
 		<meta property="og:description" content="{{ページ説明文（120文字程度）}}" />
 		<meta property="og:site_name" content="{{ページタイトル}} | Rチャンネル" />
-		<meta property="og:image" content="https://channel.rakuten.co.jp/service/gojinimuchu/img/ogp.png" />
+		<meta property="og:image" content="https://channel.rakuten.co.jp/service/gojinimuchu/img/ogp.jpg" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="{{ページタイトル}} | Rチャンネル" />
 		<meta name="twitter:description" content="{{ページ説明文（120文字程度）}}" />
-		<meta name="twitter:image" content="https://channel.rakuten.co.jp/service/gojinimuchu/img/ogp.png" />
+		<meta name="twitter:image" content="https://channel.rakuten.co.jp/service/gojinimuchu/img/ogp.jpg" />
 		<meta name="twitter:url" content="https://channel.rakuten.co.jp/service/gojinimuchu/" />
 
 		<!-- icon -->
@@ -32,14 +32,13 @@
 		<link rel="shortcut icon" href="https://channel.rakuten.co.jp/service/img/favicon.ico" />
 		<link rel="apple-touch-icon" href="https://channel.rakuten.co.jp/service/img/appHomeIcon.png" />
 
-		<!-- preload（KVにpicture/webpを使う場合、PC/SP用画像をここでpreloadすると初期表示が速くなる。不要なら削除） -->
-		<!-- <link rel="preload" as="image" href="img/kv-sp.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high" /> -->
-		<!-- <link rel="preload" as="image" href="img/kv-pc.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high" /> -->
+		<!-- preload -->
+		<link rel="preload" as="image" href="img/kv/mv.webp" type="image/webp" fetchpriority="high" />
 
 		<!-- css -->
 		<link rel="stylesheet" href="/service/common/css/sanitize.css" />
 		<link rel="stylesheet" href="/service/common/css/style.css" />
-		<link rel="stylesheet" href="css/style.css?v=20261001024528" />
+		<link rel="stylesheet" href="css/style.css?v=20261001060511" />
 
 		<!-- font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -179,10 +178,41 @@
 		<main>
 			<div class="gojinimuchu-main">
   <div class="gojinimuchu-main-inr">
-    <div class="gojinimuchu-kv" id="kv">
+    <div class="gojinimuchu-fix_cta" id="fix_cta">
+	<div class="gojinimuchu-fix_cta-inr">
+		<div class="gojinimuchu-fix_cta-details">
+			<p>
+				<span class="nonesp">
+					月～金曜 17:00～18:00<br>
+					CH 108 TOKYO MXにて生配信「5時に夢中！」
+					<small>
+						※月～金曜 17:00～18:00以外は別番組配信中
+					</small>
+				</span>
+				<span class="nonepc">
+					「5時に夢中！」毎週 月〜金 17:00〜配信
+				</span>
+			</p>
+		</div>
+		<div class="gojinimuchu-fix_cta-button">
+			<a href="https://channel.rakuten.co.jp/?channel=92&scid=wi_rch_gojinimuchu-tokyomx&utm_source=gojinimuchu-sitelink&utm_medium=banner&utm_campaign=gojinimuchu-tokyomx">
+				<span><stream-icon aria-hidden="true"></stream-icon>無料で視聴する</span>
+				<arw-icon aria-hidden="true"></arw-icon>
+			</a>
+		</div>
+	</div>
+</div><button
+	type="button"
+	class="gojinimuchu-pagetop"
+	id="pagetop"
+	aria-label="ページトップへ戻る">
+	<arw-icon class="icon" aria-hidden="true"></arw-icon>
+	<span>上へ戻る</span>
+</button>
+<div class="gojinimuchu-kv" id="kv">
 	<div class="gojinimuchu-kv-inr">
 		<div class="gojinimuchu-kv-img">
-			<img src="./img/kv/mv.webp" alt="{{ページタイトル}}">
+			<img src="./img/kv/mv.webp" alt="{{ページタイトル}}" width="800" height="450" fetchpriority="high" decoding="async">
 		</div>
 	</div>
 </div><div class="gojinimuchu-cta" id="cta">
@@ -192,7 +222,7 @@
 				<li><span>CH108 TOKYO MX</span></li>
 				<li><span>毎週 月〜金 17:00〜配信</span></li>
 			</ul>
-			<h1>
+			<h1 class="gojinimuchu-cta-ttl">
 				<span>5時に夢中!</span>
 			</h1>
 			<p>
@@ -201,9 +231,9 @@
 			</p>
 		</div>
 		<div class="gojinimuchu-cta-button">
-			<a href="https://channel.rakuten.co.jp/service/gojinimuchu/">
-				<span><stream-icon></stream-icon>無料で視聴する</span>
-				<arw-icon></arw-icon>
+			<a href="https://channel.rakuten.co.jp/?channel=92&scid=wi_rch_gojinimuchu-tokyomx&utm_source=gojinimuchu-sitelink&utm_medium=banner&utm_campaign=gojinimuchu-tokyomx">
+				<span><stream-icon aria-hidden="true"></stream-icon>無料で視聴する</span>
+				<arw-icon aria-hidden="true"></arw-icon>
 			</a>
 			<ol>
 				<li><span>放送日時：毎週月曜〜金曜 17:00〜18:00</span></li>
@@ -211,13 +241,14 @@
 			</ol>
 		</div>
 	</div>
-</div><div class="gojinimuchu-about sec" id="about">
+</div>
+<div class="gojinimuchu-about sec" id="about">
 	<div class="gojinimuchu-about-inr sec-inr">
 
 		<h2 class="sec-ttl">
 			<picture>
 				<source srcset="./img/about/ttl.webp" type="image/webp" media="(min-width: 768px)">
-				<img src="./img/about/ttl_sp.webp" alt="「5時に夢中!」とは">
+				<img src="./img/about/ttl_sp.webp" alt="「5時に夢中!」とは" loading="lazy" decoding="async">
 			</picture>
 		</h2>
 
@@ -227,7 +258,7 @@
 	<div class="gojinimuchu-about-one-img">
 		<picture>
 			<source srcset="./img/about/one/img.webp" type="image/webp" media="(min-width: 768px)">
-			<img src="./img/about/one/img_sp.webp" alt="5時に夢中!">
+			<img src="./img/about/one/img_sp.webp" alt="5時に夢中!" loading="lazy" decoding="async">
 		</picture>
 	</div>
 	<div class="gojinimuchu-about-one-details">
@@ -287,10 +318,10 @@
 	</div>
 	<div class="gojinimuchu-about-three-cv">
 		<div class="gojinimuchu-about-three-cv-img">
-			<img src="./img/about/three/logo.webp" alt="TOKYO MX" loading="lazy">
+			<img src="./img/about/three/logo.webp" alt="TOKYO MX" width="272" height="50" loading="lazy" decoding="async">
 		</div>
 		<div class="gojinimuchu-about-three-cv-link">
-			<a href="https://channel.rakuten.co.jp/service/gojinimuchu/">
+			<a href="https://s.mxtv.jp/tokyomxplus/mx/list/b_mkhlndu5ytdxzww9.html" target="_blank" rel="noopener noreferrer">
 				<span><blank-icon class="ico"></blank-icon>TOKYO MX+を見てみる</span>
 			</a>
 		</div>
@@ -307,7 +338,7 @@
 		<h2 class="sec-ttl">
 			<picture>
 				<source srcset="./img/cast/ttl.webp" type="image/webp" media="(min-width: 768px)">
-				<img src="./img/cast/ttl_sp.webp" alt="TOKYO MXの他番組も配信中">
+				<img src="./img/cast/ttl_sp.webp" alt="出演者" loading="lazy" decoding="async">
 			</picture>
 		</h2>
 
@@ -316,68 +347,95 @@
 			<div class="gojinimuchu-cast-commentator sec-box">
 	<h3 class="gojinimuchu-cast-commentator-ttl">コメンテーター</h3>
 
-	<ul class="gojinimuchu-cast-commentator-tab js-cast-tab">
-					<li>
+	<ul class="gojinimuchu-cast-commentator-tab tab" role="tablist" aria-label="コメンテーター曜日">
+					<li role="presentation">
 				<button
 					type="button"
+					id="cast-tab-mon"
 					class="gojinimuchu-cast-commentator-tab-btn is-active"
+					role="tab"
 					data-tab="mon"
-					aria-selected="true">
+					aria-controls="cast-panel-mon"
+					aria-selected="true"
+					tabindex="0">
 					<span class="gojinimuchu-cast-commentator-tab-label">月曜</span>
-					<arw-icon class="icon"></arw-icon>
+					<arw-icon class="icon" aria-hidden="true"></arw-icon>
 				</button>
 			</li>
-					<li>
+					<li role="presentation">
 				<button
 					type="button"
+					id="cast-tab-tue"
 					class="gojinimuchu-cast-commentator-tab-btn"
+					role="tab"
 					data-tab="tue"
-					aria-selected="false">
+					aria-controls="cast-panel-tue"
+					aria-selected="false"
+					tabindex="-1">
 					<span class="gojinimuchu-cast-commentator-tab-label">火曜</span>
-					<arw-icon class="icon"></arw-icon>
+					<arw-icon class="icon" aria-hidden="true"></arw-icon>
 				</button>
 			</li>
-					<li>
+					<li role="presentation">
 				<button
 					type="button"
+					id="cast-tab-wed"
 					class="gojinimuchu-cast-commentator-tab-btn"
+					role="tab"
 					data-tab="wed"
-					aria-selected="false">
+					aria-controls="cast-panel-wed"
+					aria-selected="false"
+					tabindex="-1">
 					<span class="gojinimuchu-cast-commentator-tab-label">水曜</span>
-					<arw-icon class="icon"></arw-icon>
+					<arw-icon class="icon" aria-hidden="true"></arw-icon>
 				</button>
 			</li>
-					<li>
+					<li role="presentation">
 				<button
 					type="button"
+					id="cast-tab-thu"
 					class="gojinimuchu-cast-commentator-tab-btn"
+					role="tab"
 					data-tab="thu"
-					aria-selected="false">
+					aria-controls="cast-panel-thu"
+					aria-selected="false"
+					tabindex="-1">
 					<span class="gojinimuchu-cast-commentator-tab-label">木曜</span>
-					<arw-icon class="icon"></arw-icon>
+					<arw-icon class="icon" aria-hidden="true"></arw-icon>
 				</button>
 			</li>
-					<li>
+					<li role="presentation">
 				<button
 					type="button"
+					id="cast-tab-fri"
 					class="gojinimuchu-cast-commentator-tab-btn"
+					role="tab"
 					data-tab="fri"
-					aria-selected="false">
+					aria-controls="cast-panel-fri"
+					aria-selected="false"
+					tabindex="-1">
 					<span class="gojinimuchu-cast-commentator-tab-label">金曜</span>
-					<arw-icon class="icon"></arw-icon>
+					<arw-icon class="icon" aria-hidden="true"></arw-icon>
 				</button>
 			</li>
 			</ul>
 
 			<div
-			class="gojinimuchu-cast-commentator-panel js-cast-panel is-active"
+			id="cast-panel-mon"
+			class="gojinimuchu-cast-commentator-panel tab-body is-active"
+			role="tabpanel"
+			aria-labelledby="cast-tab-mon"
 			data-panel="mon"
 			>
 							<div class="gojinimuchu-cast-commentator-panel-item">
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/wakabayashi.webp"
-							alt="若林史江">
+							alt="若林史江"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>月曜 コメンテーター</p>
@@ -388,7 +446,11 @@
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/matsuko.webp"
-							alt="マツコ・デラックス">
+							alt="マツコ・デラックス"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>月曜 コメンテーター</p>
@@ -397,14 +459,21 @@
 				</div>
 					</div>
 			<div
-			class="gojinimuchu-cast-commentator-panel js-cast-panel"
+			id="cast-panel-tue"
+			class="gojinimuchu-cast-commentator-panel tab-body"
+			role="tabpanel"
+			aria-labelledby="cast-tab-tue"
 			data-panel="tue"
 			hidden>
 							<div class="gojinimuchu-cast-commentator-panel-item">
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/hokuto.webp"
-							alt="北斗晶">
+							alt="北斗晶"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>火曜 コメンテーター</p>
@@ -415,7 +484,11 @@
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/iwashita.webp"
-							alt="岩下尚史">
+							alt="岩下尚史"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>火曜 コメンテーター</p>
@@ -426,7 +499,11 @@
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/toki.webp"
-							alt="トキ<br>(黒船特派員)">
+							alt="トキ(黒船特派員)"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>火曜 コメンテーター</p>
@@ -435,14 +512,21 @@
 				</div>
 					</div>
 			<div
-			class="gojinimuchu-cast-commentator-panel js-cast-panel"
+			id="cast-panel-wed"
+			class="gojinimuchu-cast-commentator-panel tab-body"
+			role="tabpanel"
+			aria-labelledby="cast-tab-wed"
 			data-panel="wed"
 			hidden>
 							<div class="gojinimuchu-cast-commentator-panel-item">
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/matsuda.webp"
-							alt="松田ゆう姫">
+							alt="松田ゆう姫"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>水曜 コメンテーター</p>
@@ -453,7 +537,11 @@
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/nakamaru.webp"
-							alt="中丸雄一">
+							alt="中丸雄一"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>水曜 コメンテーター</p>
@@ -464,7 +552,11 @@
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/kobara.webp"
-							alt="小原プラス">
+							alt="小原プラス"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>水曜 コメンテーター</p>
@@ -473,14 +565,21 @@
 				</div>
 					</div>
 			<div
-			class="gojinimuchu-cast-commentator-panel js-cast-panel"
+			id="cast-panel-thu"
+			class="gojinimuchu-cast-commentator-panel tab-body"
+			role="tabpanel"
+			aria-labelledby="cast-tab-thu"
 			data-panel="thu"
 			hidden>
 							<div class="gojinimuchu-cast-commentator-panel-item">
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/nakase.webp"
-							alt="中瀬ゆかり">
+							alt="中瀬ゆかり"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>木曜 コメンテーター</p>
@@ -491,7 +590,11 @@
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/iwai.webp"
-							alt="岩井志麻子">
+							alt="岩井志麻子"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>木曜 コメンテーター</p>
@@ -502,7 +605,11 @@
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/jonathan.webp"
-							alt="ジョナサン<br>(黒船特派員)">
+							alt="ジョナサン(黒船特派員)"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>木曜 コメンテーター</p>
@@ -511,14 +618,21 @@
 				</div>
 					</div>
 			<div
-			class="gojinimuchu-cast-commentator-panel js-cast-panel"
+			id="cast-panel-fri"
+			class="gojinimuchu-cast-commentator-panel tab-body"
+			role="tabpanel"
+			aria-labelledby="cast-tab-fri"
 			data-panel="fri"
 			hidden>
 							<div class="gojinimuchu-cast-commentator-panel-item">
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/nakao.webp"
-							alt="中尾ミエ">
+							alt="中尾ミエ"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>金曜 コメンテーター</p>
@@ -529,7 +643,11 @@
 					<div class="gojinimuchu-cast-commentator-panel-item-img">
 						<img
 							src="./img/cast/photo/kent.webp"
-							alt="ケント<br>(こども黒船特派員)">
+							alt="ケント(こども黒船特派員)"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="gojinimuchu-cast-commentator-panel-item-details">
 						<p>金曜 コメンテーター</p>
@@ -550,7 +668,7 @@
 		<h2 class="sec-ttl">
 			<picture>
 				<source srcset="./img/other/ttl.webp" type="image/webp" media="(min-width: 768px)">
-				<img src="./img/other/ttl_sp.webp" alt="TOKYO MXの他番組も配信中">
+				<img src="./img/other/ttl_sp.webp" alt="TOKYO MXの他番組も配信中" loading="lazy" decoding="async">
 			</picture>
 			<p>
 				※予定変更の場合あり。<br class="nonepc">
@@ -564,7 +682,11 @@
 						<div class="gojinimuchu-other-list-item-img">
 							<img
 								src="./img/other/program/wakeup7.webp"
-								alt="Wake Up 7">
+								alt="Wake Up 7"
+								width="256"
+								height="144"
+								loading="lazy"
+								decoding="async">
 						</div>
 						<div class="gojinimuchu-other-list-item-details">
 							<h3>Wake Up 7</h3>
@@ -576,7 +698,11 @@
 						<div class="gojinimuchu-other-list-item-img">
 							<img
 								src="./img/other/program/news.webp"
-								alt="TOKYO MX NEWS">
+								alt="TOKYO MX NEWS"
+								width="256"
+								height="144"
+								loading="lazy"
+								decoding="async">
 						</div>
 						<div class="gojinimuchu-other-list-item-details">
 							<h3>TOKYO MX NEWS</h3>
@@ -588,7 +714,11 @@
 						<div class="gojinimuchu-other-list-item-img">
 							<img
 								src="./img/other/program/hiho.webp"
-								alt="配信報道局 ハイホー！">
+								alt="配信報道局 ハイホー！"
+								width="256"
+								height="144"
+								loading="lazy"
+								decoding="async">
 						</div>
 						<div class="gojinimuchu-other-list-item-details">
 							<h3>配信報道局 ハイホー！</h3>
@@ -602,7 +732,11 @@
 						<div class="gojinimuchu-other-list-item-img">
 							<img
 								src="./img/other/program/livejunction.webp"
-								alt="堀潤 Live Junction">
+								alt="堀潤 Live Junction"
+								width="256"
+								height="144"
+								loading="lazy"
+								decoding="async">
 						</div>
 						<div class="gojinimuchu-other-list-item-details">
 							<h3>堀潤 Live Junction</h3>
@@ -614,7 +748,11 @@
 						<div class="gojinimuchu-other-list-item-img">
 							<img
 								src="./img/other/program/tochiji.webp"
-								alt="都知事定例会見">
+								alt="都知事定例会見"
+								width="256"
+								height="144"
+								loading="lazy"
+								decoding="async">
 						</div>
 						<div class="gojinimuchu-other-list-item-details">
 							<h3>都知事定例会見</h3>
@@ -626,7 +764,11 @@
 						<div class="gojinimuchu-other-list-item-img">
 							<img
 								src="./img/other/program/gekironsummit.webp"
-								alt="激論サミット">
+								alt="激論サミット"
+								width="256"
+								height="144"
+								loading="lazy"
+								decoding="async">
 						</div>
 						<div class="gojinimuchu-other-list-item-details">
 							<h3>激論サミット</h3>
@@ -638,7 +780,11 @@
 						<div class="gojinimuchu-other-list-item-img">
 							<img
 								src="./img/other/program/wakeup7.webp"
-								alt="Wake Up 7">
+								alt="Wake Up 7"
+								width="256"
+								height="144"
+								loading="lazy"
+								decoding="async">
 						</div>
 						<div class="gojinimuchu-other-list-item-details">
 							<h3>Wake Up 7</h3>
@@ -651,25 +797,25 @@
 
 	</div>
 </div>
-<div class="gojinimuchu-cta" id="cta">
+<div class="gojinimuchu-cta">
 	<div class="gojinimuchu-cta-inr">
 		<div class="gojinimuchu-cta-details">
 			<ul>
 				<li><span>CH108 TOKYO MX</span></li>
 				<li><span>毎週 月〜金 17:00〜配信</span></li>
 			</ul>
-			<h1>
+			<p class="gojinimuchu-cta-ttl">
 				<span>5時に夢中!</span>
-			</h1>
+			</p>
 			<p>
 				TOKYO MXの人気番組『5時に夢中！』をRチャンネルで生配信！<br>
 				スマホでもPCでも無料でご視聴いただけます。
 			</p>
 		</div>
 		<div class="gojinimuchu-cta-button">
-			<a href="https://channel.rakuten.co.jp/service/gojinimuchu/">
-				<span><stream-icon></stream-icon>無料で視聴する</span>
-				<arw-icon></arw-icon>
+			<a href="https://channel.rakuten.co.jp/?channel=92&scid=wi_rch_gojinimuchu-tokyomx&utm_source=gojinimuchu-sitelink&utm_medium=banner&utm_campaign=gojinimuchu-tokyomx">
+				<span><stream-icon aria-hidden="true"></stream-icon>無料で視聴する</span>
+				<arw-icon aria-hidden="true"></arw-icon>
 			</a>
 			<ol>
 				<li><span>放送日時：毎週月曜〜金曜 17:00〜18:00</span></li>
@@ -677,53 +823,32 @@
 			</ol>
 		</div>
 	</div>
-</div>  </div>
+</div>
+  </div>
 </div>		</main>
 
 		<!-- #footer -->
 		<div id="footer"></div>
 		<!-- /#footer -->
 
-		<!-- フッターフローティングボタン -->
-		<!-- <div class="c-float__footer js-float">
-			<div class="l-wrap">
-				<div class="c-float__button-container">
-					<div class="c-float__button c-button">
-						<a href="{{フローティングボタンのリンク先URL}}" class="c-float__link c-button__link c-button__link--primary">{{フローティングボタンのテキスト}}</a>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- /フッターフローティングボタン -->
-
-		<!-- #pagetop（ページ内トップへ戻るボタン） -->
-		<div id="pagetop"></div>
-		<!-- /#pagetop -->
-
 		<!-- PITARI Footer -->
 		<div id="mkdiv_footer_pitari" data-phoenix-cmo_poc_test_pc></div>
 		<!-- /PITARI Footer -->
-
-		<!-- PITARI対策  -->
-		<!-- <div class="l-space"></div> -->
-		<!-- /PITARI対策  -->
 
 		<!-- js -->
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
 		<script type="text/javascript" src="/service/common/js/header.js" defer></script>
 		<script type="text/javascript" src="/service/common/js/footer.js" defer></script>
-		<script type="text/javascript" src="/service/common/js/pagetop.js" defer></script>
 		<script type="text/javascript" src="/service/common/js/script.js" defer></script>
-		<script type="text/javascript" src="js/script.js?v=20261001024528" defer></script>
+		<script type="text/javascript" src="js/script.js?v=20261001060511" defer></script>
 
-		<!-- header・footer・pagetop読み込み -->
+		<!-- header・footer読み込み -->
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
 				document.getElementById('header').innerHTML = headerHtml;
 				document.getElementById('footer').innerHTML = footerHtml;
-				document.getElementById('pagetop').innerHTML = pagetopHtml;
 			});
 		</script>
-		<!-- /header・footer・pagetop読み込み -->
+		<!-- /header・footer読み込み -->
 	</body>
 </html>

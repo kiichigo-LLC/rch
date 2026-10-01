@@ -37,16 +37,20 @@
 <div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?> sec-box">
 	<h3 class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-ttl">コメンテーター</h3>
 
-	<ul class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-tab js-cast-tab">
+	<ul class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-tab tab" role="tablist" aria-label="コメンテーター曜日">
 		<?php foreach ($days as $day_key => $day_label) : ?>
-			<li>
+			<li role="presentation">
 				<button
 					type="button"
+					id="cast-tab-<?php echo $day_key; ?>"
 					class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-tab-btn<?php echo $day_key === 'mon' ? ' is-active' : ''; ?>"
+					role="tab"
 					data-tab="<?php echo $day_key; ?>"
-					aria-selected="<?php echo $day_key === 'mon' ? 'true' : 'false'; ?>">
+					aria-controls="cast-panel-<?php echo $day_key; ?>"
+					aria-selected="<?php echo $day_key === 'mon' ? 'true' : 'false'; ?>"
+					tabindex="<?php echo $day_key === 'mon' ? '0' : '-1'; ?>">
 					<span class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-tab-label"><?php echo $day_label; ?></span>
-					<arw-icon class="icon"></arw-icon>
+					<arw-icon class="icon" aria-hidden="true"></arw-icon>
 				</button>
 			</li>
 		<?php endforeach; ?>
@@ -54,7 +58,10 @@
 
 	<?php foreach ($days as $day_key => $day_label) : ?>
 		<div
-			class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-panel js-cast-panel<?php echo $day_key === 'mon' ? ' is-active' : ''; ?>"
+			id="cast-panel-<?php echo $day_key; ?>"
+			class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-panel tab-body<?php echo $day_key === 'mon' ? ' is-active' : ''; ?>"
+			role="tabpanel"
+			aria-labelledby="cast-tab-<?php echo $day_key; ?>"
 			data-panel="<?php echo $day_key; ?>"
 			<?php echo $day_key === 'mon' ? '' : 'hidden'; ?>>
 			<?php foreach ($commentators[$day_key] as $person) : ?>
@@ -62,7 +69,11 @@
 					<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-panel-item-img">
 						<img
 							src="./img/<?php echo $DIR_NAME; ?>/photo/<?php echo $person['img']; ?>"
-							alt="<?php echo $person['name']; ?>">
+							alt="<?php echo strip_tags($person['name']); ?>"
+							width="140"
+							height="140"
+							loading="lazy"
+							decoding="async">
 					</div>
 					<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-panel-item-details">
 						<p><?php echo $day_label; ?> コメンテーター</p>

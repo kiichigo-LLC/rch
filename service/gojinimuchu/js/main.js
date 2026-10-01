@@ -7,11 +7,13 @@
  * メインJavaScript（エントリーポイント）
  */
 
-import { initFloat } from './modules/float.js';
 import { initCastTab } from './modules/castTab.js';
+import { initFixCta } from './modules/fixCta.js';
+import { initPageTop } from './modules/pageTop.js';
 import './modules/icons/index.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-	initFloat();
 	initCastTab();
+	initFixCta();
+	initPageTop();
 });

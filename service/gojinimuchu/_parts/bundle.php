@@ -1,6 +1,8 @@
 <div class="<?php echo PROJECT_DIR; ?>-main">
   <div class="<?php echo PROJECT_DIR; ?>-main-inr">
     <?php
+      include './_parts/main/fix_cta.php';
+      include './_parts/main/pagetop.php';
       include './_parts/main/kv.php';
       include './_parts/main/cta.php';
       include './_parts/main/about.php';

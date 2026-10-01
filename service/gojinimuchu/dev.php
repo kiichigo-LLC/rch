@@ -22,8 +22,7 @@ $page_title = '{{ページタイトル}}';
 $page_description = '{{ページ説明文（120文字程度）}}';
 $page_slug = 'gojinimuchu';
 $page_url = 'https://channel.rakuten.co.jp/service/' . $page_slug . '/';
-$float_url = '{{フローティングボタンのリンク先URL}}';
-$float_text = '{{フローティングボタンのテキスト}}';
+$cv_url = 'https://channel.rakuten.co.jp/?channel=92&scid=wi_rch_gojinimuchu-tokyomx&utm_source=gojinimuchu-sitelink&utm_medium=banner&utm_campaign=gojinimuchu-tokyomx';
 $version = date('YmdHis');
 
 define('PROJECT_DIR', $page_slug);
@@ -32,8 +31,7 @@ define('PAGE_TITLE', $page_title);
 define('PAGE_DESCRIPTION', $page_description);
 define('PAGE_URL', $page_url);
 define('PAGE_SLUG', $page_slug);
-define('FLOAT_URL', $float_url);
-define('FLOAT_TEXT', $float_text);
+define('CV_URL', $cv_url);
 ?>
 <!doctype html>
 <html lang="ja">
@@ -51,11 +49,11 @@ define('FLOAT_TEXT', $float_text);
 		<meta property="og:title" content="<?php echo PAGE_TITLE; ?> | Rチャンネル" />
 		<meta property="og:description" content="<?php echo PAGE_DESCRIPTION; ?>" />
 		<meta property="og:site_name" content="<?php echo PAGE_TITLE; ?> | Rチャンネル" />
-		<meta property="og:image" content="<?php echo PAGE_URL; ?>img/ogp.png" />
+		<meta property="og:image" content="<?php echo PAGE_URL; ?>img/ogp.jpg" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="<?php echo PAGE_TITLE; ?> | Rチャンネル" />
 		<meta name="twitter:description" content="<?php echo PAGE_DESCRIPTION; ?>" />
-		<meta name="twitter:image" content="<?php echo PAGE_URL; ?>img/ogp.png" />
+		<meta name="twitter:image" content="<?php echo PAGE_URL; ?>img/ogp.jpg" />
 		<meta name="twitter:url" content="<?php echo PAGE_URL; ?>" />
 
 		<!-- icon -->
@@ -69,9 +67,8 @@ define('FLOAT_TEXT', $float_text);
 		<link rel="shortcut icon" href="https://channel.rakuten.co.jp/service/img/favicon.ico" />
 		<link rel="apple-touch-icon" href="https://channel.rakuten.co.jp/service/img/appHomeIcon.png" />
 
-		<!-- preload（KVにpicture/webpを使う場合、PC/SP用画像をここでpreloadすると初期表示が速くなる。不要なら削除） -->
-		<!-- <link rel="preload" as="image" href="img/kv-sp.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high" /> -->
-		<!-- <link rel="preload" as="image" href="img/kv-pc.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high" /> -->
+		<!-- preload -->
+		<link rel="preload" as="image" href="img/kv/mv.webp" type="image/webp" fetchpriority="high" />
 
 		<!-- css -->
 		<link rel="stylesheet" href="/service/common/css/sanitize.css" />
@@ -221,46 +218,24 @@ define('FLOAT_TEXT', $float_text);
 		<div id="footer"></div>
 		<!-- /#footer -->
 
-		<!-- フッターフローティングボタン -->
-		<!-- <div class="c-float__footer js-float">
-			<div class="l-wrap">
-				<div class="c-float__button-container">
-					<div class="c-float__button c-button">
-						<a href="<?php echo FLOAT_URL; ?>" class="c-float__link c-button__link c-button__link--primary"><?php echo FLOAT_TEXT; ?></a>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- /フッターフローティングボタン -->
-
-		<!-- #pagetop（ページ内トップへ戻るボタン） -->
-		<div id="pagetop"></div>
-		<!-- /#pagetop -->
-
 		<!-- PITARI Footer -->
 		<div id="mkdiv_footer_pitari" data-phoenix-cmo_poc_test_pc></div>
 		<!-- /PITARI Footer -->
-
-		<!-- PITARI対策  -->
-		<!-- <div class="l-space"></div> -->
-		<!-- /PITARI対策  -->
 
 		<!-- js -->
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
 		<script type="text/javascript" src="/service/common/js/header.js" defer></script>
 		<script type="text/javascript" src="/service/common/js/footer.js" defer></script>
-		<script type="text/javascript" src="/service/common/js/pagetop.js" defer></script>
 		<script type="text/javascript" src="/service/common/js/script.js" defer></script>
 		<script type="text/javascript" src="js/script.js?v=<?php echo ASSETS_VERSION; ?>" defer></script>
 
-		<!-- header・footer・pagetop読み込み -->
+		<!-- header・footer読み込み -->
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
 				document.getElementById('header').innerHTML = headerHtml;
 				document.getElementById('footer').innerHTML = footerHtml;
-				document.getElementById('pagetop').innerHTML = pagetopHtml;
 			});
 		</script>
-		<!-- /header・footer・pagetop読み込み -->
+		<!-- /header・footer読み込み -->
 	</body>
 </html>

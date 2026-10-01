@@ -25,7 +25,11 @@
 			<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-item-img">
 				<img
 					src="./img/<?php echo $DIR_NAME; ?>/photo/<?php echo $subcast['img']; ?>"
-					alt="<?php echo $subcast['name']; ?>">
+					alt="<?php echo strip_tags($subcast['name']); ?>"
+					width="160"
+					height="160"
+					loading="lazy"
+					decoding="async">
 			</div>
 			<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-item-details">
 				<p>

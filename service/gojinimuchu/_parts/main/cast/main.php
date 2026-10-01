@@ -4,7 +4,7 @@
 ?>
 <div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?> sec-box">
 	<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-img">
-		<img src="./img/<?php echo $DIR_NAME; ?>/photo/kakihana.webp" alt="垣花 正">
+		<img src="./img/<?php echo $DIR_NAME; ?>/photo/kakihana.webp" alt="垣花 正" width="160" height="160" loading="lazy" decoding="async">
 	</div>
 	<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-details">
 		<p class="tag">月〜木曜 メインMC</p>

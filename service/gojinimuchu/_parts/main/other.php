@@ -46,7 +46,7 @@
 		<h2 class="sec-ttl">
 			<picture>
 				<source srcset="./img/<?php echo $FILE_NAME; ?>/ttl.webp" type="image/webp" media="(min-width: 768px)">
-				<img src="./img/<?php echo $FILE_NAME; ?>/ttl_sp.webp" alt="TOKYO MXの他番組も配信中">
+				<img src="./img/<?php echo $FILE_NAME; ?>/ttl_sp.webp" alt="TOKYO MXの他番組も配信中" loading="lazy" decoding="async">
 			</picture>
 			<p>
 				※予定変更の場合あり。<br class="nonepc">
@@ -61,7 +61,11 @@
 						<div class="<?php echo PROJECT_DIR; ?>-<?php echo $FILE_NAME; ?>-list-item-img">
 							<img
 								src="./img/<?php echo $FILE_NAME; ?>/program/<?php echo $program['img']; ?>"
-								alt="<?php echo $program['title']; ?>">
+								alt="<?php echo $program['title']; ?>"
+								width="256"
+								height="144"
+								loading="lazy"
+								decoding="async">
 						</div>
 						<div class="<?php echo PROJECT_DIR; ?>-<?php echo $FILE_NAME; ?>-list-item-details">
 							<h3><?php echo $program['title']; ?></h3>

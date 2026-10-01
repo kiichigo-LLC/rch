@@ -8,7 +8,7 @@
 		<h2 class="sec-ttl">
 			<picture>
 				<source srcset="./img/<?php echo $FILE_NAME; ?>/ttl.webp" type="image/webp" media="(min-width: 768px)">
-				<img src="./img/<?php echo $FILE_NAME; ?>/ttl_sp.webp" alt="TOKYO MXの他番組も配信中">
+				<img src="./img/<?php echo $FILE_NAME; ?>/ttl_sp.webp" alt="出演者" loading="lazy" decoding="async">
 			</picture>
 		</h2>
 

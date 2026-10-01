@@ -20,10 +20,10 @@
 	</div>
 	<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-cv">
 		<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-cv-img">
-			<img src="./img/<?php echo $DIR_NAME; ?>/<?php echo $FILE_NAME; ?>/logo.webp" alt="TOKYO MX" loading="lazy">
+			<img src="./img/<?php echo $DIR_NAME; ?>/<?php echo $FILE_NAME; ?>/logo.webp" alt="TOKYO MX" width="272" height="50" loading="lazy" decoding="async">
 		</div>
 		<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-cv-link">
-			<a href="<?php echo PAGE_URL; ?>">
+			<a href="https://s.mxtv.jp/tokyomxplus/mx/list/b_mkhlndu5ytdxzww9.html" target="_blank" rel="noopener noreferrer">
 				<span><blank-icon class="ico"></blank-icon>TOKYO MX+を見てみる</span>
 			</a>
 		</div>

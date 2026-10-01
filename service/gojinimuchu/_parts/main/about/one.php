@@ -6,7 +6,7 @@
 	<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-img">
 		<picture>
 			<source srcset="./img/<?php echo $DIR_NAME; ?>/<?php echo $FILE_NAME; ?>/img.webp" type="image/webp" media="(min-width: 768px)">
-			<img src="./img/<?php echo $DIR_NAME; ?>/<?php echo $FILE_NAME; ?>/img_sp.webp" alt="5時に夢中!">
+			<img src="./img/<?php echo $DIR_NAME; ?>/<?php echo $FILE_NAME; ?>/img_sp.webp" alt="5時に夢中!" loading="lazy" decoding="async">
 		</picture>
 	</div>
 	<div class="<?php echo PROJECT_DIR; ?>-<?php echo $DIR_NAME; ?>-<?php echo $FILE_NAME; ?>-details">

@@ -8,7 +8,7 @@
 		<h2 class="sec-ttl">
 			<picture>
 				<source srcset="./img/<?php echo $FILE_NAME; ?>/ttl.webp" type="image/webp" media="(min-width: 768px)">
-				<img src="./img/<?php echo $FILE_NAME; ?>/ttl_sp.webp" alt="「5時に夢中!」とは">
+				<img src="./img/<?php echo $FILE_NAME; ?>/ttl_sp.webp" alt="「5時に夢中!」とは" loading="lazy" decoding="async">
 			</picture>
 		</h2>
 
