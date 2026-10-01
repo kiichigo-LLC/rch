@@ -661,6 +661,11 @@ default
           max-width: 310px;
           margin: 0;
           flex: none;
+          @media (max-width: $brake_md) {
+            width: 90%;
+            max-width: none;
+            scroll-snap-align: center;
+          }
           .twitter-tweet {
             margin: 0 auto !important;
           }
@@ -675,11 +680,6 @@ default
           scrollbar-width: none;
           &::-webkit-scrollbar {
             display: none;
-          }
-          &-item {
-            width: 90%;
-            max-width: none;
-            scroll-snap-align: center;
           }
         }
       }

@@ -15,8 +15,8 @@
 		<div class="sec-cont">
 
 			<?php 
-				// include $PARTS_DIR . '/main.php';
-				// include $PARTS_DIR . '/sub.php';
+				include $PARTS_DIR . '/main.php';
+				include $PARTS_DIR . '/sub.php';
 				include $PARTS_DIR . '/commentator.php';
 			?>
 

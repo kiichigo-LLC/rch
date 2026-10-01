@@ -1,0 +1,37 @@
+[
+	{
+		"img": "wakeup7.webp",
+		"title": "Wake Up 7",
+		"time": "月～金曜 7:00～7:30"
+	},
+	{
+		"img": "news.webp",
+		"title": "TOKYO MX NEWS",
+		"time": "月～金曜 11:00～・13:00～・15:00～"
+	},
+	{
+		"img": "hiho.webp",
+		"title": "配信報道局 ハイホー！",
+		"time": "火・金曜 12:00～12:30 ／<br>再配信 14:00～※・16:00～・18:00～<br>※「都知事定例会見」放送時は休止"
+	},
+	{
+		"img": "livejunction.webp",
+		"title": "堀潤 Live Junction",
+		"time": "月～金曜 19:57～20:57"
+	},
+	{
+		"img": "tochiji.webp",
+		"title": "都知事定例会見",
+		"time": "金曜 13:59～14:30"
+	},
+	{
+		"img": "gekironsummit.webp",
+		"title": "激論サミット",
+		"time": "随時配信"
+	},
+	{
+		"img": "wakeup7.webp",
+		"title": "Wake Up 7",
+		"time": "土・日曜 12:55～・17:55～"
+	}
+]

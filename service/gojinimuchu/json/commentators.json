@@ -1,0 +1,45 @@
+[
+	{
+		"key": "mon",
+		"label": "月曜",
+		"people": [
+			{ "img": "wakabayashi.webp", "name": "若林史江" },
+			{ "img": "matsuko.webp", "name": "マツコ・デラックス" }
+		]
+	},
+	{
+		"key": "tue",
+		"label": "火曜",
+		"people": [
+			{ "img": "hokuto.webp", "name": "北斗晶" },
+			{ "img": "iwashita.webp", "name": "岩下尚史" },
+			{ "img": "toki.webp", "name": "トキ<br>(黒船特派員)" }
+		]
+	},
+	{
+		"key": "wed",
+		"label": "水曜",
+		"people": [
+			{ "img": "matsuda.webp", "name": "松田ゆう姫" },
+			{ "img": "nakamaru.webp", "name": "中丸雄一" },
+			{ "img": "kobara.webp", "name": "小原プラス" }
+		]
+	},
+	{
+		"key": "thu",
+		"label": "木曜",
+		"people": [
+			{ "img": "nakase.webp", "name": "中瀬ゆかり" },
+			{ "img": "iwai.webp", "name": "岩井志麻子" },
+			{ "img": "jonathan.webp", "name": "ジョナサン<br>(黒船特派員)" }
+		]
+	},
+	{
+		"key": "fri",
+		"label": "金曜",
+		"people": [
+			{ "img": "nakao.webp", "name": "中尾ミエ" },
+			{ "img": "kent.webp", "name": "ケント<br>(こども黒船特派員)" }
+		]
+	}
+]
